@@ -10,8 +10,8 @@
 6 silly lifecycle weex@0.4.0~prebuild:browser: no script for prebuild:browser, continuing
 7 info lifecycle weex@0.4.0~build:browser: weex@0.4.0
 8 verbose lifecycle weex@0.4.0~build:browser: unsafe-perm in lifecycle true
-9 verbose lifecycle weex@0.4.0~build:browser: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/master/gitme/yokaweex2/node_modules/.bin:/Applications/Cocos/tools/ant/bin:/Applications/Cocos/frameworks:/Applications/Cocos/frameworks/cocos2d-x-3.5/tools/cocos2d-console/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/master/Desktop/adt-bundle-mac-x86_64-20140702/sdk/tools:/Users/master/Desktop/adt-bundle-mac-x86_64-20140702/sdk/platform-tools
-10 verbose lifecycle weex@0.4.0~build:browser: CWD: /Users/master/gitme/yokaweex2
+9 verbose lifecycle weex@0.4.0~build:browser: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/master/gitme/mmweex2/node_modules/.bin:/Applications/Cocos/tools/ant/bin:/Applications/Cocos/frameworks:/Applications/Cocos/frameworks/cocos2d-x-3.5/tools/cocos2d-console/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/master/Desktop/adt-bundle-mac-x86_64-20140702/sdk/tools:/Users/master/Desktop/adt-bundle-mac-x86_64-20140702/sdk/platform-tools
+10 verbose lifecycle weex@0.4.0~build:browser: CWD: /Users/master/gitme/mmweex2
 11 silly lifecycle weex@0.4.0~build:browser: Args: [ '-c', 'wwp && node build/build.js browser' ]
 12 silly lifecycle weex@0.4.0~build:browser: Returned: code: 1  signal: null
 13 info lifecycle weex@0.4.0~build:browser: Failed to exec build:browser script
@@ -26,7 +26,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:899:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid weex@0.4.0
-16 verbose cwd /Users/master/gitme/yokaweex2
+16 verbose cwd /Users/master/gitme/mmweex2
 17 error Darwin 14.5.0
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "build:browser"
 19 error node v7.7.1
