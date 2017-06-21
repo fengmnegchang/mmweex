@@ -21,6 +21,7 @@ require('weex-components')
         },
         created () {
             this.themetype = this.$getConfig().themetype;
+            this.rows.push('article/m_article')
             this.rows.push('fashion/edittj')
             this.rows.push('fashion/focuspager')
             this.rows.push('fashion/foottag')

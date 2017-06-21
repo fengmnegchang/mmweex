@@ -3,15 +3,15 @@
         <div if="{{showStatusBar}}" class="status_bar_ios status_bar-{{type}}"></div>
         <div class="nav_bar nav_bar-{{type}}">
             <div class="nav_back nav_back-{{type}}" onclick="nativeback">
-                <image class="img" src="{{getImgUrl('./images/login.png')}}" if="{{shownleft}}"></image>
+                <image class="img" src="{{getImgUrl('./images/menu.png')}}" if="{{shownleft}}"></image>
             </div>
             <div class="nav_title">
-                <!--<text class="nav_text nav_text-{{type}} nav_text_top-{{nav_text_top}}">{{title}}</text>-->
-                <image class="imglogo" src="{{getImgUrl('./images/logo.png')}}" if="{{shownleft}}"></image>
+                <text class="nav_text nav_text-{{type}} nav_text_top-{{nav_text_top}}">{{title}}</text>
+                <!--<image class="imglogo" src="{{getImgUrl('./images/logo.png')}}" if="{{shownleft}}"></image>-->
             </div>
             <div class="nav_right_menu">
                 <div class="nav_right_menu nav_back-{{type}}" if="{{shown}}" onclick="onright">
-                    <image class="img_menu" src="{{getImgUrl('./images/zoom.png')}}"></image>
+                    <image class="img_menu" src="{{getImgUrl('./images/search.png')}}"></image>
                 </div>
             </div>
         </div>
@@ -87,17 +87,17 @@
         display: flex;
         flex-direction: row;
         flex: 1;
-        height: 80;
+        height: 100;
         justify-content: center;
         align-items: center;
     }
 
     .nav_bar-0 {
-        background-color: #000;
+        background-color: #fc5677;
     }
 
     .nav_bar-1 {
-        background-color: #000;
+        background-color: #fc5677;
     }
 
     .nav_text {
