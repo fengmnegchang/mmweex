@@ -34,7 +34,12 @@
         },
         methods: {
             towebdetail:function (e) {
-//                weexEventModule.startYokaWebViewActivity(this.stockitem.link);
+                var optionJson={
+                    URL:this.stockitem.href
+                };
+                console.log(JSON.stringify(optionJson));
+               weexEventModule.startNativeActivity("com.open.mm.activity.m.MImagePullListActivity",JSON.stringify(optionJson));
+//             weexEventModule.startWebViewActivity(this.stockitem.href);
             },
         }
     }
