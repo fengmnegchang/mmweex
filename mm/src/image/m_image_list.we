@@ -8,8 +8,14 @@
                     下拉刷新
                 </text>
             </refresh>
+            <cell>
+                <m_image_head></m_image_head>
+            </cell>
             <cell repeat="{{tag in tags}}" onclick="closemenu">
                 <m_image_list_item tag="{{tag}}"></m_image_list_item>
+            </cell>
+            <cell>
+                <m_image_foot></m_image_foot>
             </cell>
             <loading class="loading-view loading-view-{{skinType}}" display="{{showLoading}}" onloading="onloading">
                 <text class="refresh-arrow refresh-arrow-{{skinType}}">
@@ -22,6 +28,8 @@
 </template>
 <script>
     require('./m_image_list_item.we')
+    require('./m_image_head.we')
+    require('./m_image_foot.we')
     require('weex-components');
     var yoka = require('../mm');
     var weexJsoupModule = require('@weex-module/weexJsoupModule');
