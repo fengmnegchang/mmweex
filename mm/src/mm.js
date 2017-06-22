@@ -14,7 +14,13 @@ var YOKA = {
     yokam:"http://www.yoka.com/dna/m/",
     mm_m_main:"http://m.mm131.com",
     mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
-    mm_m_search_url :"http://m.mm131.com/search.php?"
+    mm_m_search_url :"http://m.mm131.com/search.php?",
+    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
+};
+exports.getmm_m_image = function () {
+    var url = YOKA.mm_m_image;
+    console.log('mm_m_image==' + url);
+    return url;
 };
 exports.getmm_m_search_url = function () {
     var url = YOKA.mm_m_search_url;
