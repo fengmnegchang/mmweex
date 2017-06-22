@@ -1,10 +1,7 @@
 <template>
     <div  class="itemClass itemClass_{{platform}}-{{skinType}}" >
         <div class="news-bottom">
-            <div repeat="{{t in tag}}" onclick="towebdetail(t.href)" class="tag" >
-                <image class="img" src="{{t.src}}"></image>
-                <text class="tucao_numClass textClass-{{skinType}}" >{{t.alt}}</text>
-            </div>
+            <text class="tucao_numClass textClass-{{skinType}}" onclick="towebdetail(tag.href)"  >{{tag.title}}</text>
         </div>
         <div class="lineClass lineClass-{{skinType}}"></div>
     </div>
@@ -22,18 +19,16 @@
         },
         data: {
             platform: '',
-            tag: [
-                {
+            tag:{
                     "href":"http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
-                    "alt":"这6个穿搭法则如果记住，时髦一整年没问题！",
-                    "src":""
-                }
-            ],
+                    "title":"这6个穿搭法则如果记住，时髦一整年没问题！",
+             }
+            ,
             skinType: 0
         },
         methods: {
             towebdetail:function (e) {
-                weexEventModule.startYokaWebViewActivity(e);
+                weexEventModule.startWebViewActivity(e);
             },
         }
     }
@@ -41,12 +36,8 @@
 
 <style>
     .itemClass{
-        margin-top: 5wx;
+        margin: 10;
     }
- .img {
-        width: 300;
-        height: 200;
-        }
 
     .news-bottom {
         flex: 1;
@@ -64,17 +55,6 @@
         margin: 10;
         padding: 10;
 
-
-    }
-
-    .tag{
-            flex: 1;
-            align-items: center;
-            text-align: center;
-            margin: 10;
-            padding: 10;
-            border-width: 1;
-            border-color: #6F5F5F;
     }
 
 
@@ -92,7 +72,7 @@
 
 
     .lineClass {
-        height: 2wx;
+        height: 2;
     }
 
     .lineClass-0 {
