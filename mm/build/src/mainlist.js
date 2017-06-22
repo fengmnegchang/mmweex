@@ -44,9 +44,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(135)
-	var __weex_style__ = __webpack_require__(136)
-	var __weex_script__ = __webpack_require__(137)
+	var __weex_template__ = __webpack_require__(156)
+	var __weex_style__ = __webpack_require__(157)
+	var __weex_script__ = __webpack_require__(158)
 
 	__weex_define__('@weex-component/8b30ca170eade5fff5f5a70b6560bb51', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2036,8 +2036,8 @@
 	var BASE_URL = {
 	    //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
 	    //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-	    IP: '192.168.1.15:8080',
-	    HTTP: 'http://',//https:// http://
+	    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
+	    HTTP: 'https://',//https:// http://
 
 	};
 
@@ -2049,7 +2049,13 @@
 	    yokam:"http://www.yoka.com/dna/m/",
 	    mm_m_main:"http://m.mm131.com",
 	    mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
-	    mm_m_search_url :"http://m.mm131.com/search.php?"
+	    mm_m_search_url :"http://m.mm131.com/search.php?",
+	    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
+	};
+	exports.getmm_m_image = function () {
+	    var url = YOKA.mm_m_image;
+	    console.log('mm_m_image==' + url);
+	    return url;
 	};
 	exports.getmm_m_search_url = function () {
 	    var url = YOKA.mm_m_search_url;
@@ -2231,7 +2237,28 @@
 /* 132 */,
 /* 133 */,
 /* 134 */,
-/* 135 */
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2272,7 +2299,7 @@
 	}
 
 /***/ },
-/* 136 */
+/* 157 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2305,7 +2332,7 @@
 	}
 
 /***/ },
-/* 137 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -2328,6 +2355,9 @@
 	        this.rows.push('menu/mslideoutmenu');
 	        this.rows.push('search/m_search');
 	        this.rows.push('search/m_search_article');
+	        this.rows.push('image/m_image_foot');
+	        this.rows.push('image/m_image_head');
+	        this.rows.push('image/m_image_list');
 	        this.rows.push('webnews');
 	        this.rows.push('tabbar');
 	        this.rows.push('scroller-demo');

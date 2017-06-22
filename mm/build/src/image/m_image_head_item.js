@@ -44,11 +44,11 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(185)
-	var __weex_style__ = __webpack_require__(186)
-	var __weex_script__ = __webpack_require__(187)
+	var __weex_template__ = __webpack_require__(140)
+	var __weex_style__ = __webpack_require__(141)
+	var __weex_script__ = __webpack_require__(142)
 
-	__weex_define__('@weex-component/42e8e25c63ec1ab4fac150f862d4647b', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+	__weex_define__('@weex-component/ce9a98ad44f48d361203dc651b66b3f1', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
 	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
 	    if (__weex_exports__.__esModule && __weex_exports__.default) {
@@ -61,7 +61,7 @@
 
 	})
 
-	__weex_bootstrap__('@weex-component/42e8e25c63ec1ab4fac150f862d4647b',undefined,undefined)
+	__weex_bootstrap__('@weex-component/ce9a98ad44f48d361203dc651b66b3f1',undefined,undefined)
 
 /***/ },
 /* 1 */,
@@ -2242,200 +2242,138 @@
 /* 137 */,
 /* 138 */,
 /* 139 */,
-/* 140 */,
-/* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */,
-/* 158 */,
-/* 159 */,
-/* 160 */,
-/* 161 */,
-/* 162 */,
-/* 163 */,
-/* 164 */,
-/* 165 */,
-/* 166 */,
-/* 167 */,
-/* 168 */,
-/* 169 */,
-/* 170 */,
-/* 171 */,
-/* 172 */,
-/* 173 */,
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */
+/* 140 */
 /***/ function(module, exports) {
 
 	module.exports = {
 	  "type": "div",
-	  "classList": [
-	    "wrapper"
-	  ],
+	  "classList": function () {return ['itemClass', 'itemClass_' + (this.platform) + '-' + (this.skinType)]},
+	  "events": {
+	    "click": function ($event) {this.towebdetail(this.tag.href,$event)}
+	  },
 	  "children": [
 	    {
 	      "type": "div",
 	      "classList": [
-	        "toolbar"
+	        "news-bottom"
 	      ],
-	      "append": "tree",
 	      "children": [
 	        {
-	          "type": "wxc-button",
+	          "type": "text",
+	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
 	          "attr": {
-	            "type": "primary",
-	            "size": "small",
-	            "value": "back"
-	          },
-	          "events": {
-	            "click": "goback"
-	          },
-	          "style": {
-	            "marginLeft": 30,
-	            "width": 210,
-	            "marginTop": 5,
-	            "marginBottom": 5
-	          }
-	        },
-	        {
-	          "type": "wxc-button",
-	          "attr": {
-	            "type": "primary",
-	            "size": "small",
-	            "value": "forward"
-	          },
-	          "events": {
-	            "click": "goforward"
-	          },
-	          "style": {
-	            "marginLeft": 30,
-	            "width": 210,
-	            "marginTop": 5,
-	            "marginBottom": 5
-	          }
-	        },
-	        {
-	          "type": "wxc-button",
-	          "attr": {
-	            "type": "primary",
-	            "size": "small",
-	            "value": "refresh"
-	          },
-	          "events": {
-	            "click": "refresh"
-	          },
-	          "style": {
-	            "marginLeft": 30,
-	            "width": 210,
-	            "marginTop": 5,
-	            "marginBottom": 5
+	            "value": function () {return this.tag.alt}
 	          }
 	        }
 	      ]
 	    },
 	    {
-	      "type": "web",
+	      "type": "div",
 	      "classList": [
-	        "content"
+	        "news-bottom"
 	      ],
-	      "id": "webview",
-	      "attr": {
-	        "src": function () {return this.src}
-	      },
-	      "events": {
-	        "pagestart": "startload",
-	        "pagefinish": "finishload",
-	        "error": "failload"
-	      }
+	      "children": [
+	        {
+	          "type": "text",
+	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
+	          "attr": {
+	            "value": function () {return this.tag.postmeta}
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "classList": [
+	        "news-bottom"
+	      ],
+	      "children": [
+	        {
+	          "type": "text",
+	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
+	          "attr": {
+	            "value": function () {return this.tag.meta}
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "classList": function () {return ['lineClass', 'lineClass-' + (this.skinType)]}
 	    }
 	  ]
 	}
 
 /***/ },
-/* 186 */
+/* 141 */
 /***/ function(module, exports) {
 
 	module.exports = {
-	  "wrapper": {
-	    "width": 750,
-	    "position": "absolute",
-	    "top": 0,
-	    "left": 0,
-	    "right": 0,
-	    "bottom": 0
+	  "itemClass": {
+	    "margin": 5
 	  },
-	  "content": {
-	    "position": "absolute",
-	    "top": 0,
-	    "left": 0,
-	    "right": 0,
-	    "bottom": 0,
-	    "marginTop": 0,
-	    "marginBottom": 70
-	  },
-	  "toolbar": {
+	  "news-bottom": {
+	    "flex": 1,
+	    "alignItems": "center",
 	    "flexDirection": "row",
-	    "position": "fixed",
-	    "bottom": 0,
-	    "left": 0,
-	    "right": 0,
-	    "height": 70
+	    "margin": 5
+	  },
+	  "tucao_numClass": {
+	    "fontSize": "12wx",
+	    "marginLeft": "4wx",
+	    "flex": 1,
+	    "alignItems": "flex-start",
+	    "padding": 10
+	  },
+	  "textClass-0": {
+	    "color:active": "#666666",
+	    "backgroundColor:active": "#dddddd"
+	  },
+	  "textClass-1": {
+	    "color:active": "#666666",
+	    "backgroundColor:active": "#132237"
+	  },
+	  "lineClass": {
+	    "height": 2
+	  },
+	  "lineClass-0": {
+	    "backgroundColor": "#eeeeee"
+	  },
+	  "lineClass-1": {
+	    "backgroundColor": "#0e1929"
 	  }
 	}
 
 /***/ },
-/* 187 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
 	__webpack_require__(8);
 	var yoka = __webpack_require__(89);
+	var weexEventModule = __weex_require__('@weex-module/weexEventModule');
+
 	module.exports = {
+	    created: function created() {
+	        this.platform = this.$getConfig().env.platform;
+	    },
 	    data: function () {return {
-	        src: yoka.getUrl('html/slideout.html')
+	        platform: '',
+	        tag: {
+	            "href": "http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
+	            "alt": "这6个穿搭法则如果记住，时髦一整年没问题！",
+	            postmeta: '',
+	            tag: '',
+	            meta: ''
+	        },
+
+	        skinType: 0
 	    }},
 	    methods: {
-	        goback: function goback() {
-	            var webElement = this.$el('webview');
-	            $webview.goBack(webElement.ref);
-	        },
-	        goforward: function goforward() {
-	            var $webview = __weex_require__('@weex-module/webview');
-	            var webElement = this.$el('webview');
-	            $webview.goForward(webElement.ref);
-	        },
-	        refresh: function refresh() {
-	            var $webview = __weex_require__('@weex-module/webview');
-	            var webElement = this.$el('webview');
-	            $webview.reload(webElement.ref);
-	        },
-	        startload: function startload(e) {},
-	        finishload: function finishload(e) {},
-	        failload: function failload(e) {}
+	        towebdetail: function towebdetail(e) {
+	            weexEventModule.startWebViewActivity(e);
+	        }
 	    }
 	};}
 	/* generated by weex-loader */

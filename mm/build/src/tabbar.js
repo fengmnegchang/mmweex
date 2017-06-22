@@ -44,8 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(159)
-	var __weex_script__ = __webpack_require__(160)
+	var __weex_template__ = __webpack_require__(180)
+	var __weex_script__ = __webpack_require__(181)
 
 	__weex_define__('@weex-component/f7981c3f6978ef7e7a6df175f7b52b7b', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2033,8 +2033,8 @@
 	var BASE_URL = {
 	    //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
 	    //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-	    IP: '192.168.1.15:8080',
-	    HTTP: 'http://',//https:// http://
+	    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
+	    HTTP: 'https://',//https:// http://
 
 	};
 
@@ -2046,7 +2046,13 @@
 	    yokam:"http://www.yoka.com/dna/m/",
 	    mm_m_main:"http://m.mm131.com",
 	    mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
-	    mm_m_search_url :"http://m.mm131.com/search.php?"
+	    mm_m_search_url :"http://m.mm131.com/search.php?",
+	    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
+	};
+	exports.getmm_m_image = function () {
+	    var url = YOKA.mm_m_image;
+	    console.log('mm_m_image==' + url);
+	    return url;
 	};
 	exports.getmm_m_search_url = function () {
 	    var url = YOKA.mm_m_search_url;
@@ -2252,7 +2258,28 @@
 /* 156 */,
 /* 157 */,
 /* 158 */,
-/* 159 */
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2271,7 +2298,7 @@
 	}
 
 /***/ },
-/* 160 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';

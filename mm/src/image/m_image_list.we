@@ -1,5 +1,6 @@
 <template>
     <div>
+        <navbar style="width: 750;" title="{{title}}" type="{{skinType}}" leftsrc="{{leftsrc}}"  shownleft="{{showleft}}" shown="{{shown}}"></navbar>
         <list class="list" >
             <refresh class="refresh-view refresh-view-{{skinType}}" display="{{refresh_display}}" onrefresh="onrefresh"
                      refreshing="{{refreshing}}">
@@ -31,9 +32,11 @@
     require('./m_image_head.we')
     require('./m_image_foot.we')
     require('weex-components');
+    require('../template/navbar.we')
     var yoka = require('../mm');
     var weexJsoupModule = require('@weex-module/weexJsoupModule');
     var storage = require('@weex-module/storage');
+    var weexNavigatorModule = require('@weex-module/weexNavigatorModule')
     module.exports = {
         data: {
             tags: [],
@@ -42,8 +45,20 @@
             skinType: 0,
             showLoading: 'hide',
             pageNo: 1,
+            title:'',
+            showleft:true,
+            shown:false,
+            leftsrc:'./images/back.png'
         },
         methods: {
+            togglemenu:function (e) {
+                var params = {
+                    'animated': 'true'
+                };
+                weexNavigatorModule.pop(params, event => {
+
+                });
+            },
             closemenu:function () {
                 this._parent.close();
             },
@@ -80,6 +95,7 @@
                         if (json.list && json.list.length > 0) {
                             for (var i = 0; i < json.list.length; i++) {
                                 var tag = json.list[i];
+                                self.title = tag.alt;
                                 self.tags.push(tag);
                             }
                         }
