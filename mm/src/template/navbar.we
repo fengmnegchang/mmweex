@@ -3,7 +3,7 @@
         <div if="{{showStatusBar}}" class="status_bar_ios status_bar-{{type}}"></div>
         <div class="nav_bar nav_bar-{{type}}">
             <div class="nav_back nav_back-{{type}}" onclick="nativeback">
-                <image class="img" src="{{getImgUrl('./images/menu.png')}}" if="{{shownleft}}"></image>
+                <image class="img" src="{{getImgUrl(leftsrc)}}" if="{{shownleft}}"></image>
             </div>
             <div class="nav_title">
                 <text class="nav_text nav_text-{{type}} nav_text_top-{{nav_text_top}}">{{title}}</text>
@@ -30,7 +30,8 @@
             shown: false,
             showStatusBar: 0,
             nav_text_top: 0,
-            shownleft: false
+            shownleft: false,
+            leftsrc:'./images/menu.png'
 
         },
         created: function () {
@@ -61,6 +62,7 @@
             },
             onright: function (e) {
                 console.log('navbar == onright');
+                this._parent.onright();
 
             },
 
@@ -150,6 +152,7 @@
         width: 70;
         height: 70;
         margin-left: 20;
+        padding: 10;
     }
 
     .nav_back-0:active {

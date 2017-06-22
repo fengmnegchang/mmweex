@@ -2218,7 +2218,7 @@
 	                "img"
 	              ],
 	              "attr": {
-	                "src": function () {return this.getImgUrl('./images/menu.png')}
+	                "src": function () {return this.getImgUrl(this.leftsrc)}
 	              },
 	              "shown": function () {return this.shownleft}
 	            }
@@ -2335,7 +2335,8 @@
 	  "img": {
 	    "width": 70,
 	    "height": 70,
-	    "marginLeft": 20
+	    "marginLeft": 20,
+	    "padding": 10
 	  },
 	  "nav_back-0": {
 	    "backgroundColor:active": "#000000"
@@ -2401,7 +2402,8 @@
 	        shown: false,
 	        showStatusBar: 0,
 	        nav_text_top: 0,
-	        shownleft: false
+	        shownleft: false,
+	        leftsrc: './images/menu.png'
 
 	    }},
 	    created: function created() {
@@ -2423,6 +2425,7 @@
 	        },
 	        onright: function onright(e) {
 	            console.log('navbar == onright');
+	            this._parent.onright();
 	        },
 
 	        getImgUrl: function getImgUrl(url) {

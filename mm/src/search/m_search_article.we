@@ -1,6 +1,6 @@
 <template>
     <div>
-        <navbar style="width: 750;" title="{{title}}" type="{{skinType}}" shownleft="{{showleft}}" shown="{{shown}}"></navbar>
+        <navbar style="width: 750;" title="{{title}}" type="{{skinType}}" leftsrc="{{leftsrc}}" shownleft="{{showleft}}" shown="{{shown}}"></navbar>
         <list class="list">
             <refresh class="refresh-view refresh-view-{{skinType}}" display="{{refresh_display}}" onrefresh="onrefresh"
                      refreshing="{{refreshing}}">
@@ -30,6 +30,7 @@
     var stream = require('@weex-module/stream');
     var modal = require('@weex-module/modal');
     var weexJsoupModule = require('@weex-module/weexJsoupModule');
+    var weexNavigatorModule = require('@weex-module/weexNavigatorModule')
     module.exports = {
 
         data: {
@@ -44,8 +45,9 @@
             platform: '',
             title:'MM131搜索列表',
             showleft:true,
-            shown:true,
-            taghref:yoka.getmm_m_search()
+            shown:false,
+            taghref:yoka.getmm_m_search(),
+            leftsrc:'./images/back.png'
         },
         created: function () {
             var self = this;
@@ -64,8 +66,13 @@
             self.refresh();
         },
         methods: {
-            togglemenu:function () {
-                this._parent.toggle();
+            togglemenu:function (e) {
+                var params = {
+                    'animated': 'true'
+                };
+                weexNavigatorModule.pop(params, e => {
+
+                });
             },
             onloading: function (e) {
                 console.log('onloading');

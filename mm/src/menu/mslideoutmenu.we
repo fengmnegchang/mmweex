@@ -19,7 +19,7 @@
     require('./m_left_menu.we')
     require('../article/m_article.we')
     require('weex-components');
-
+    var weexNavigatorModule = require('@weex-module/weexNavigatorModule')
     module.exports = {
         data: {
             srcmenu: yoka.getUrl('html/images/menu.png'),
@@ -48,6 +48,16 @@
             },
             close: function (e) {
                 this.showmenu = 0;
+            },
+            onright:function (e) {
+                var name = "search/m_search";
+                var url = yoka.getDefaultUrl(name);
+                weexNavigatorModule.push({
+                    url:url,
+                    animated: "true"
+                }, e => {
+
+                });
             },
 
         }

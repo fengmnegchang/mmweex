@@ -55,6 +55,9 @@
             togglemenu:function () {
                 this._parent.toggle();
             },
+            onright:function () {
+                this._parent.onright();
+            },
             onloading: function (e) {
                 console.log('onloading');
                 var self = this;

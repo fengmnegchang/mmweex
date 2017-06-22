@@ -1,6 +1,6 @@
 <template>
     <div>
-        <navbar style="width: 750;" title="{{title}}" type="{{skinType}}" shownleft="{{showleft}}" shown="{{shown}}"></navbar>
+        <navbar style="width: 750;" title="{{title}}" type="{{skinType}}" leftsrc="{{leftsrc}}" shownleft="{{showleft}}" shown="{{shown}}"></navbar>
         <div style="flex: 1;flex-direction: row">
             <textarea
                     type="text"
@@ -35,8 +35,9 @@
             platform: '',
             title:'MM131搜索',
             showleft:true,
-            shown:true,
-            searchcontent:''
+            shown:false,
+            searchcontent:'',
+            leftsrc:'./images/back.png'
         },
         created: function () {
             var self = this;
@@ -70,6 +71,14 @@
 
                 });
             },
+            togglemenu:function (e) {
+                var params = {
+                    'animated': 'true'
+                };
+                weexNavigatorModule.pop(params, event => {
+
+                });
+            }
         }
     }
 </script>
