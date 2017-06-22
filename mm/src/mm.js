@@ -13,6 +13,18 @@ var YOKA = {
     beauty:"http://www.yoka.com/beauty/",
     yokam:"http://www.yoka.com/dna/m/",
     mm_m_main:"http://m.mm131.com",
+    mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
+    mm_m_search_url :"http://m.mm131.com/search.php?"
+};
+exports.getmm_m_search_url = function () {
+    var url = YOKA.mm_m_search_url;
+    console.log('mm_m_search_url==' + url);
+    return url;
+};
+exports.getmm_m_search = function () {
+    var url = YOKA.mm_m_search;
+    console.log('mm_m_search==' + url);
+    return url;
 };
 
 exports.getmm_m_main = function () {
