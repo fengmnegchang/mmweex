@@ -48,7 +48,9 @@
             title:'',
             showleft:true,
             shown:false,
-            leftsrc:'./images/back.png'
+            leftsrc:'./images/back.png',
+            href:yoka.getmm_m_image()
+
         },
         methods: {
             togglemenu:function (e) {
@@ -78,7 +80,7 @@
             refresh: function () {
                 var self = this;
                 var param = {
-                    url:yoka.getmm_m_image(),
+                    url:self.href,
                     pageNo:self.pageNo
                 };
                 weexJsoupModule.mimagelist(param,function(e){
@@ -107,15 +109,20 @@
         },
         created: function () {
             var self = this;
-            storage.getItem('taghref',function(s){
-                console.log('get taghref result:'+JSON.stringify(s));
-                var staghref = s.data;
-                if(staghref!=undefined){
-                    self.taghref = staghref;
-                }
-                console.log('taghref=='+self.taghref);
-                self.refresh();
-            });
+//            storage.getItem('taghref',function(s){
+//                console.log('get taghref result:'+JSON.stringify(s));
+//                var staghref = s.data;
+//                if(staghref!=undefined){
+//                    self.taghref = staghref;
+//                }
+//                console.log('taghref=='+self.taghref);
+//                self.refresh();
+//            });
+            var shref = this.$getConfig().href;
+            if(shref!=undefined){
+             self.href = shref;
+            }
+            self.refresh();
 
         },
         ready: function () {

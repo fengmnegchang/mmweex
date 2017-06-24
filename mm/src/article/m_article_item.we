@@ -12,7 +12,7 @@
     require('weex-components');
     var yoka = require('../mm');
     var weexEventModule = require('@weex-module/weexEventModule');
-
+var weexNavigatorModule = require('@weex-module/weexNavigatorModule')
     module.exports = {
         created: function () {
             this.platform = this.$getConfig().env.platform;
@@ -34,12 +34,27 @@
         },
         methods: {
             towebdetail:function (e) {
-                var optionJson={
-                    URL:this.stockitem.href
-                };
-                console.log(JSON.stringify(optionJson));
-               weexEventModule.startNativeActivity("com.open.mm.activity.m.MImagePullListActivity",JSON.stringify(optionJson));
+//                var optionJson={
+//                    URL:this.stockitem.href
+//                };
+//                console.log(JSON.stringify(optionJson));
+//               weexEventModule.startNativeActivity("com.open.mm.activity.m.MImagePullListActivity",JSON.stringify(optionJson));
 //             weexEventModule.startWebViewActivity(this.stockitem.href);
+
+            var self = this;
+                var name = "image/m_image_list";
+                var url = yoka.getDefaultUrl(name);
+                var taghref = self.stockitem.href;
+                weexNavigatorModule.push({
+                    url:url,
+                    animated: "true",
+                    options:{
+                        href: taghref,
+                        title:self.stockitem.alt,
+                    }
+                }, event => {
+
+                });
             },
         }
     }

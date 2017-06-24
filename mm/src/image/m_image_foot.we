@@ -31,7 +31,8 @@
             refreshing: 'false',
             refresh_display: 'show',
             skinType: 0,
-            showLoading: 'hide'
+            showLoading: 'hide',
+             href:yoka.getmm_m_image()
         },
         methods: {
             closemenu:function () {
@@ -44,7 +45,7 @@
             },
             refresh: function () {
                 var self = this;
-                weexJsoupModule.mimagefoot(yoka.getmm_m_image(),function(e){
+                weexJsoupModule.mimagefoot(self.href,function(e){
                     self.refresh_display = 'hide';
                     self.showLoading = 'hide';
                     self.refreshing = "false";
@@ -67,16 +68,20 @@
         },
         created: function () {
             var self = this;
-            storage.getItem('taghref',function(s){
-                console.log('get taghref result:'+JSON.stringify(s));
-                var staghref = s.data;
-                if(staghref!=undefined){
-                    self.taghref = staghref;
-                }
-                console.log('taghref=='+self.taghref);
-                self.refresh();
-            });
-
+//            storage.getItem('taghref',function(s){
+//                console.log('get taghref result:'+JSON.stringify(s));
+//                var staghref = s.data;
+//                if(staghref!=undefined){
+//                    self.taghref = staghref;
+//                }
+//                console.log('taghref=='+self.taghref);
+//                self.refresh();
+//            });
+var shref = this.$getConfig().href;
+            if(shref!=undefined){
+             self.href = shref;
+            }
+             self.refresh();
         },
         ready: function () {
 
