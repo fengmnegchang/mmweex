@@ -9,11 +9,18 @@
                     下拉刷新
                 </text>
             </refresh>
-
+            <cell>
+                <pcmainheadpager></pcmainheadpager>
+            </cell>
             <cell repeat="{{tag in tags}}" onclick="closemenu">
                 <pc_main_image_list_item tag="{{tag}}"></pc_main_image_list_item>
             </cell>
-
+            <cell>
+                <pc_main_image_head></pc_main_image_head>
+            </cell>
+            <cell>
+                <pc_main_image_foot></pc_main_image_foot>
+            </cell>
             <loading class="loading-view loading-view-{{skinType}}" display="{{showLoading}}" onloading="onloading">
                 <text class="refresh-arrow refresh-arrow-{{skinType}}">
                     加载更多
@@ -24,6 +31,9 @@
     </div>
 </template>
 <script>
+    require('../pager/pcmainheadpager.we')
+    require('./pc_main_image_head.we')
+    require('./pc_main_image_foot.we')
     require('./pc_main_image_list_item.we')
     require('weex-components');
     require('../template/navbar.we')

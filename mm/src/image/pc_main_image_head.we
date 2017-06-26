@@ -1,6 +1,6 @@
 <template>
     <div>
-        <list class="list" >
+        <list class="list"  >
             <refresh class="refresh-view refresh-view-{{skinType}}" display="{{refresh_display}}" onrefresh="onrefresh"
                      refreshing="{{refreshing}}">
                 <loading-indicator class="indicator"></loading-indicator>
@@ -27,7 +27,8 @@
             refresh_display: 'show',
             skinType: 0,
             showLoading: 'hide',
-            href:yoka.getmm_pc()
+            href:yoka.getmm_pc(),
+            cheight:0
         },
         methods: {
             closemenu:function () {
