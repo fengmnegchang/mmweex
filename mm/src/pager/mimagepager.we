@@ -1,0 +1,94 @@
+<template>
+    <slider class="slider"  interval="{{interval}}" onchange="change"  index="{{index}}" auto-play="false">
+        <indicator class="indicator"></indicator>
+        <div repeat="{{sliderPage in sliderPages}}">
+            <slider-item item="{{sliderPage}}"></slider-item>
+        </div>
+
+    </slider>
+</template>
+
+<script>
+    require('weex-components');
+    require('./slider-item.we')
+    var yoka = require('../mm');
+    var weexJsoupModule = require('@weex-module/weexJsoupModule');
+    module.exports = {
+        data: {
+            interval: 1000,
+            autoPlay: true,
+            sliderPages: [],
+            url:'http://m.mm131.com/mingxing/1577.html',
+            pageNo:1,
+            index:0
+        },
+        methods: {
+            refresh: function () {
+                var self = this;
+                var params = {
+                    url:self.url,
+                    pageNo: self.pageNo
+                };
+                weexJsoupModule.mimagepager(params,function(e){
+                    var json;
+                    json = eval('(' + e + ')');
+                    console.log('json==='+json);
+                    if (json.list) {
+                        if (json.list && json.list.length > 0) {
+                            for (var i = 0; i < json.list.length; i++) {
+                                var stockitem = json.list[i];
+                                console.log('self.pageNo=='+self.pageNo);
+                                if(self.pageNo==1){
+                                    self.sliderPages.push(stockitem);
+                                }else{
+                                    console.log('dataimg=='+stockitem.dataimg);
+                                    self.sliderPages[self.pageNo-1].dataimg = stockitem.dataimg;
+                                }
+                            }
+                        }
+                    }
+                });
+            },
+            change:function (params) {
+                var index = params.index;
+                this.setIndex(index);
+            },
+            setIndex: function (index) {
+                var self = this;
+                self.index = index;
+                self.url = self.sliderPages[index].href;
+                self.pageNo = index+1;
+                if(index!=0){
+                    self.refresh();
+                }
+            },
+        },
+        created: function () {
+            var self = this;
+            self.refresh();
+        },
+
+    };
+</script>
+
+<style>
+
+    .slider {
+        flex-direction: row;
+        /*margin-left: 18;*/
+        /*margin-right: 18;*/
+        width: 750;
+        flex: 1;
+        height: 500;
+    }
+
+    .indicator {
+        position: absolute;
+        width: 750;
+        height: 500;
+        top: 230;
+        left: 10;
+        itemColor: #dddddd;
+        itemSelectedColor: rgb(40, 96, 144);
+    }
+</style>
