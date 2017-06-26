@@ -1,5 +1,5 @@
 <template>
-    <slider class="slider"  interval="{{interval}}" onchange="change"  index="{{index}}" auto-play="false">
+    <slider class="slider"  interval="{{interval}}"   auto-play="false">
         <indicator class="indicator"></indicator>
         <div repeat="{{sliderPage in sliderPages}}">
             <slider-item item="{{sliderPage}}"></slider-item>
@@ -18,18 +18,14 @@
             interval: 1000,
             autoPlay: true,
             sliderPages: [],
-            url:'http://m.mm131.com/mingxing/1577.html',
+            url:'http://www.mm131.com/css/focus.js',
             pageNo:1,
             index:0
         },
         methods: {
             refresh: function () {
                 var self = this;
-                var params = {
-                    url:self.url,
-                    pageNo: self.pageNo
-                };
-                weexJsoupModule.mimagepager(params,function(e){
+                weexJsoupModule.pcmainheadpager(self.url,function(e){
                     var json;
                     json = eval('(' + e + ')');
                     console.log('json==='+json);
@@ -37,31 +33,12 @@
                         if (json.list && json.list.length > 0) {
                             for (var i = 0; i < json.list.length; i++) {
                                 var stockitem = json.list[i];
-                                console.log('self.pageNo=='+self.pageNo);
-                                if(self.pageNo==1){
-                                    self.sliderPages.push(stockitem);
-                                }else{
-                                    console.log('dataimg=='+stockitem.dataimg);
-                                    self.sliderPages[self.pageNo-1].dataimg = stockitem.dataimg;
-                                }
+                                stockitem.dataimg = stockitem.src;
+                                self.sliderPages.push(stockitem);
                             }
                         }
                     }
                 });
-            },
-            change:function (params) {
-                var index = params.index;
-                this.setIndex(index);
-                console.log('href=='+this.sliderPages[index].href+';dataimg=='+this.sliderPages[index].dataimg);
-            },
-            setIndex: function (index) {
-                var self = this;
-                self.index = index;
-                self.url = self.sliderPages[index].href;
-                self.pageNo = index+1;
-                if(index!=0){
-                    self.refresh();
-                }
             },
         },
         created: function () {

@@ -16,6 +16,12 @@ var YOKA = {
     mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
     mm_m_search_url :"http://m.mm131.com/search.php?",
     mm_m_image : "http://m.mm131.com/xinggan/2847.html",
+    mm_pc : "http://www.mm131.com/"
+};
+exports.getmm_pc = function () {
+    var url = YOKA.mm_pc;
+    console.log('mm_pc==' + url);
+    return url;
 };
 exports.getmm_m_image = function () {
     var url = YOKA.mm_m_image;

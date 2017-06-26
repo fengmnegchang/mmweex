@@ -1,0 +1,117 @@
+<template>
+    <div  class="itemClass itemClass_{{platform}}-{{skinType}}" >
+        <div class="news-bottom" >
+            <text class="tucao_numClass textClass-{{skinType}}"  onclick="towebdetail" >{{tag.alt}} {{tag.href}}</text>
+           <pc_main_image_grid gridtags="{{getGrids(tag.list)}}"></pc_main_image_grid>
+        </div>
+        <div class="lineClass lineClass-{{skinType}}"></div>
+    </div>
+</template>
+
+<script>
+    require('weex-components');
+    var yoka = require('../mm');
+    var weexEventModule = require('@weex-module/weexEventModule');
+    require('./pc_main_image_grid.we')
+    module.exports = {
+        created: function () {
+            this.platform = this.$getConfig().env.platform;
+
+        },
+        data: {
+            platform: '',
+            tag:{
+                "href":"http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
+                 alt:'',
+                list:[]
+             }
+            ,
+            skinType: 0
+        },
+        methods: {
+            towebdetail:function () {
+                var self = this;
+                var href = self.tag.href;
+                weexEventModule.startWebViewActivity(href);
+            },
+            getGrids:function (tags) {
+                var gridtags=[];
+                var self = this;
+                for(var i=0;i<tags.length;i+=2){
+                    var tag = tags[i];
+                    var tag2 = tags[i+1];
+                    if(tag2==undefined){
+                        tag2 = tag;
+                    }
+                    var gridtag={
+                        href:tag.href,
+                        alt:tag.alt,
+                        src:tag.src,
+
+                        href2:tag2.href,
+                        alt2:tag2.alt,
+                        src2:tag2.src
+                    };
+
+                    console.log('gridtag==='+JSON.stringify(gridtag));
+
+                    gridtags.push(gridtag);
+                }
+                return gridtags;
+            }
+        }
+    }
+</script>
+
+<style>
+    .itemClass{
+    }
+
+    .news-bottom {
+        flex: 1;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tucao_numClass {
+        font-size: 12wx;
+        margin-left: 4wx;
+        flex: 1;
+        align-items: flex-start;
+        text-align: flex-start;
+        padding: 10;
+    }
+
+
+
+    .textClass-0:active {
+        color: #666666;
+        background-color: #dddddd
+    }
+
+    .textClass-1:active {
+        color: #666666;
+        background-color: #132237
+    }
+
+
+
+    .lineClass {
+        height: 2;
+    }
+
+    .lineClass-0 {
+        background-color: #eeeeee;
+    }
+
+    .lineClass-1 {
+        background-color: #0e1929;
+    }
+    .img {
+        width: 300;
+        flex: 1;
+        height: 300;
+    }
+
+
+</style>

@@ -1,0 +1,101 @@
+<template>
+    <div  class="itemClass itemClass_{{platform}}-{{skinType}}" >
+        <div class="news-bottom" onclick="towebdetail(gridtag.href)" >
+            <text class="tucao_numClass textClass-{{skinType}}" >{{gridtag.alt}}</text>
+            <image class="img" src="{{gridtag.src}}"></image>
+        </div>
+        <div class="news-bottom" onclick="towebdetail(gridtag.href2)" >
+            <text class="tucao_numClass textClass-{{skinType}}" >{{gridtag.alt2}}</text>
+            <image class="img" src="{{gridtag.src2}}"></image>
+        </div>
+        <div class="lineClass lineClass-{{skinType}}"></div>
+    </div>
+</template>
+
+<script>
+    require('weex-components');
+    var yoka = require('../mm');
+    var weexEventModule = require('@weex-module/weexEventModule');
+
+    module.exports = {
+        created: function () {
+            this.platform = this.$getConfig().env.platform;
+            console.log('tag=='+this.tag);
+
+        },
+        data: {
+            platform: '',
+            gridtag:{
+                "href":"http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
+                "src":"",
+                 alt:'',
+                "href2":"http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
+                "src2":"",
+                alt2:''
+             }
+            ,
+            skinType: 0
+        },
+        methods: {
+            towebdetail:function (e) {
+                weexEventModule.startWebViewActivity(e);
+            },
+        }
+    }
+</script>
+
+<style>
+    .itemClass{
+        flex: 1;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .news-bottom {
+        flex: 1;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tucao_numClass {
+        font-size: 12wx;
+        margin-left: 4wx;
+        flex: 1;
+        align-items: flex-start;
+        text-align: flex-start;
+        padding: 10;
+    }
+
+
+
+    .textClass-0:active {
+        color: #666666;
+        background-color: #dddddd
+    }
+
+    .textClass-1:active {
+        color: #666666;
+        background-color: #132237
+    }
+
+
+
+    .lineClass {
+        height: 2;
+    }
+
+    .lineClass-0 {
+        background-color: #eeeeee;
+    }
+
+    .lineClass-1 {
+        background-color: #0e1929;
+    }
+    .img {
+        width: 300;
+        flex: 1;
+        height: 300;
+    }
+
+
+</style>
