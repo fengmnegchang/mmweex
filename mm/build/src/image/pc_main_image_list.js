@@ -4441,7 +4441,6 @@
 	      "attr": {
 	        "title": function () {return this.title},
 	        "type": function () {return this.skinType},
-	        "leftsrc": function () {return this.leftsrc},
 	        "shownleft": function () {return this.showleft},
 	        "shown": function () {return this.shown}
 	      }
@@ -4645,7 +4644,7 @@
 	        skinType: 0,
 	        showLoading: 'hide',
 	        pageNo: 1,
-	        title: '',
+	        title: 'MM131 NAV列表',
 	        showleft: true,
 	        shown: false,
 	        leftsrc: './images/back.png',
@@ -4654,10 +4653,7 @@
 	    }},
 	    methods: {
 	        togglemenu: function togglemenu(e) {
-	            var params = {
-	                'animated': 'true'
-	            };
-	            weexNavigatorModule.pop(params, function (event) {});
+	            this._parent.toggle();
 	        },
 	        closemenu: function closemenu() {
 	            this._parent.close();

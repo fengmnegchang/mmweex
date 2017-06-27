@@ -39,7 +39,7 @@
             },
             refresh: function () {
                 var self = this;
-                weexJsoupModule.mleftmenu(yoka.getmm_m_main(),function(e){
+                weexJsoupModule.pctabmenu(yoka.getmm_pc(),function(e){
                     var json;
                     json = eval('(' + e + ')');
                     console.log('json==='+json);
@@ -55,12 +55,13 @@
                                     icon: '',
                                     image: 'http://gtms01.alicdn.com/tps/i1/TB1qw.hMpXXXXagXXXX9t7RGVXX-46-46.png',
                                     selectedImage: 'http://gtms04.alicdn.com/tps/i4/TB16jjPMpXXXXazXVXX9t7RGVXX-46-46.png',
-                                    src: yoka.getPathUrl('article/m_article.js', false),
+                                    src: yoka.getPathUrl('image/pc_nav_image_list.js', false),
                                     visibility: 'visible',
                                     taghref:tag.href
                                 };
                                 if(i==0){
                                     tab.visibility = 'visible';
+                                    tab.src = yoka.getPathUrl('image/pc_main_image_list.js', false);
                                 }else{
                                     tab.visibility = 'hidden';
                                 }

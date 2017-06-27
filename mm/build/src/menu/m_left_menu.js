@@ -44,10 +44,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(204)
-	var __weex_template__ = __webpack_require__(208)
-	var __weex_style__ = __webpack_require__(209)
-	var __weex_script__ = __webpack_require__(210)
+	__webpack_require__(205)
+	var __weex_template__ = __webpack_require__(209)
+	var __weex_style__ = __webpack_require__(210)
+	var __weex_script__ = __webpack_require__(211)
 
 	__weex_define__('@weex-component/278b6d0d5be9ed74f3a9c242ce7c2064', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2333,12 +2333,13 @@
 /* 201 */,
 /* 202 */,
 /* 203 */,
-/* 204 */
+/* 204 */,
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(205)
-	var __weex_style__ = __webpack_require__(206)
-	var __weex_script__ = __webpack_require__(207)
+	var __weex_template__ = __webpack_require__(206)
+	var __weex_style__ = __webpack_require__(207)
+	var __weex_script__ = __webpack_require__(208)
 
 	__weex_define__('@weex-component/m_left_menu_item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2355,7 +2356,7 @@
 
 
 /***/ },
-/* 205 */
+/* 206 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2388,7 +2389,7 @@
 	}
 
 /***/ },
-/* 206 */
+/* 207 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2430,7 +2431,7 @@
 	}
 
 /***/ },
-/* 207 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -2462,7 +2463,7 @@
 
 
 /***/ },
-/* 208 */
+/* 209 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2525,7 +2526,7 @@
 	}
 
 /***/ },
-/* 209 */
+/* 210 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2592,7 +2593,7 @@
 	}
 
 /***/ },
-/* 210 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -2603,7 +2604,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(204);
+	__webpack_require__(205);
 	__webpack_require__(5);
 	var yoka = __webpack_require__(87);
 	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');

@@ -7,7 +7,7 @@
     </div>
     <div id="main" class="panel panel-{{showmenu}}" style="height: {{deviceHeight}}" onclick="toggle">
         <div class="btn-hamburger" >
-            <menu-tabbar></menu-tabbar>
+            <pcmenu-tabbar></pcmenu-tabbar>
         </div>
     </div>
    </div>
@@ -17,7 +17,7 @@
 <script>
     var yoka = require('../mm');
     require('./m_left_menu.we')
-    require('../menu-tabbar.we')
+    require('../pcmenu-tabbar.we')
     require('weex-components');
     var weexNavigatorModule = require('@weex-module/weexNavigatorModule')
     module.exports = {
@@ -39,7 +39,7 @@
 
         },
         methods: {
-            toggle: function (e) {
+            toggle: function () {
                 if(this.showmenu==0){
                     this.showmenu = 1;
                 }else{

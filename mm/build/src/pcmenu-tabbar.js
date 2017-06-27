@@ -44,11 +44,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(200)
-	var __weex_style__ = __webpack_require__(201)
-	var __weex_script__ = __webpack_require__(202)
+	var __weex_template__ = __webpack_require__(224)
+	var __weex_script__ = __webpack_require__(225)
 
-	__weex_define__('@weex-component/8b30ca170eade5fff5f5a70b6560bb51', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+	__weex_define__('@weex-component/fd8d4087d9d2aecc280b95211e7685cf', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
 	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
 	    if (__weex_exports__.__esModule && __weex_exports__.default) {
@@ -57,11 +56,9 @@
 
 	    __weex_module__.exports.template = __weex_template__
 
-	    __weex_module__.exports.style = __weex_style__
-
 	})
 
-	__weex_bootstrap__('@weex-component/8b30ca170eade5fff5f5a70b6560bb51',undefined,undefined)
+	__weex_bootstrap__('@weex-component/fd8d4087d9d2aecc280b95211e7685cf',undefined,undefined)
 
 /***/ },
 /* 1 */,
@@ -2205,8 +2202,22 @@
 /* 88 */,
 /* 89 */,
 /* 90 */,
-/* 91 */,
-/* 92 */,
+/* 91 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(92), __esModule: true };
+
+/***/ },
+/* 92 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var core  = __webpack_require__(35)
+	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
+	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+	  return $JSON.stringify.apply($JSON, arguments);
+	};
+
+/***/ },
 /* 93 */,
 /* 94 */,
 /* 95 */,
@@ -2314,152 +2325,127 @@
 /* 197 */,
 /* 198 */,
 /* 199 */,
-/* 200 */
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */
 /***/ function(module, exports) {
 
 	module.exports = {
 	  "type": "div",
+	  "style": {
+	    "flexDirection": "column",
+	    "width": 750,
+	    "height": function () {return this.deviceHeight}
+	  },
 	  "children": [
 	    {
-	      "type": "scroller",
-	      "classList": [
-	        "scroller"
-	      ],
-	      "children": [
-	        {
-	          "type": "div",
-	          "classList": [
-	            "row"
-	          ],
-	          "repeat": {
-	            "expression": function () {return this.rows},
-	            "value": "row"
-	          },
-	          "children": [
-	            {
-	              "type": "text",
-	              "attr": {
-	                "ref": "mainlist_text_day_night_ref",
-	                "value": function () {return this.row}
-	              },
-	              "classList": function () {return [this.textClass]},
-	              "events": {
-	                "click": "openitem"
-	              }
-	            }
-	          ]
-	        }
-	      ]
+	      "type": "wxc-tabbar",
+	      "attr": {
+	        "tabItems": function () {return this.tabItems}
+	      }
 	    }
 	  ]
 	}
 
 /***/ },
-/* 201 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "scroller": {
-	    "borderWidth": 3,
-	    "borderStyle": "solid",
-	    "borderColor": "rgb(162,217,192)",
-	    "marginLeft": 1,
-	    "marginRight": 1
-	  },
-	  "row": {
-	    "height": 150,
-	    "flexDirection": "column",
-	    "justifyContent": "center",
-	    "paddingLeft": 30,
-	    "borderBottomWidth": 2,
-	    "borderBottomStyle": "solid",
-	    "borderBottomColor": "#DDDDDD"
-	  },
-	  "dayclass": {
-	    "color": "#666666",
-	    "fontSize": 40,
-	    "fontWeight": "bold"
-	  },
-	  "nightclass": {
-	    "color": "#ff0000",
-	    "fontSize": 40,
-	    "fontWeight": "bold"
-	  }
-	}
-
-/***/ },
-/* 202 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
+	var _stringify = __webpack_require__(91);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	__webpack_require__(5);
-	var navigator = __weex_require__('@weex-module/navigator');
 	var yoka = __webpack_require__(87);
-	var globalEventModule = __weex_require__('@weex-module/globalEvent');
+	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');
+	var storage = __weex_require__('@weex-module/storage');
 	module.exports = {
 	    data: function () {return {
-	        rows: [],
-	        themetype: 0,
-	        textClass: 'dayclass',
-	        TAG: 'mainlist.we'
+	        deviceHeight: 0,
+	        tabItems: []
 	    }},
 	    created: function created() {
-	        this.themetype = this.$getConfig().themetype;
-	        this.rows.push('article/m_article');
-	        this.rows.push('menu/m_left_menu');
-	        this.rows.push('menu/mslideoutmenu');
-	        this.rows.push('search/m_search');
-	        this.rows.push('search/m_search_article');
-	        this.rows.push('image/m_image_foot');
-	        this.rows.push('image/m_image_head');
-	        this.rows.push('image/m_image_list');
-	        this.rows.push('menu-tabbar');
-	        this.rows.push('pager/mimagepager');
-	        this.rows.push('pager/pcmainheadpager');
-	        this.rows.push('image/pc_main_image_head');
-	        this.rows.push('image/pc_main_image_foot');
-	        this.rows.push('image/pc_main_image_list');
-	        this.rows.push('image/pc_nav_image_head');
-	        this.rows.push('image/pc_nav_image_list');
-	        this.rows.push('pcmenu-tabbar');
-	        this.rows.push('menu/pcslideoutmenu');
-	        this.rows.push('webnews');
-	        this.rows.push('tabbar');
-	        this.rows.push('scroller-demo');
-	        this.rows.push('list-demo');
-	        this.getOptions();
-	    },
-	    ready: function ready() {
 	        var self = this;
-	        globalEventModule.addEventListener("mainlist_text_day_night", function (options) {
-	            self.themetype = options.themetype;
-	            if (self.themetype == 0) {
-	                self.textClass = 'dayclass';
-	            } else {
-	                self.textClass = 'nightclass';
-	            }
-	        });
+
+	        self.deviceHeight = 1300;
+	        console.log('deviceHeight==' + self.deviceHeight);
+	        self.refresh();
 	    },
-
 	    methods: {
-	        openitem: function openitem(event) {
-	            var name = event.target.attr.value;
-
-	            navigator.push({
-	                url: yoka.getDefaultUrl(name),
-	                animated: "true"
-	            }, function (event) {});
+	        togglemenu: function togglemenu() {
+	            this._parent.toggle();
 	        },
+	        refresh: function refresh() {
+	            var self = this;
+	            weexJsoupModule.pctabmenu(yoka.getmm_pc(), function (e) {
+	                var json;
+	                json = eval('(' + e + ')');
+	                console.log('json===' + json);
+	                self.tabItems.splice(0, self.tabItems.length);
+	                if (json.list) {
+	                    if (json.list && json.list.length > 0) {
+	                        for (var i = 0; i < json.list.length; i++) {
+	                            var tag = json.list[i];
+	                            var tab = {
+	                                index: i,
+	                                title: tag.title,
+	                                titleColor: '#000000',
+	                                icon: '',
+	                                image: 'http://gtms01.alicdn.com/tps/i1/TB1qw.hMpXXXXagXXXX9t7RGVXX-46-46.png',
+	                                selectedImage: 'http://gtms04.alicdn.com/tps/i4/TB16jjPMpXXXXazXVXX9t7RGVXX-46-46.png',
+	                                src: yoka.getPathUrl('image/pc_nav_image_list.js', false),
+	                                visibility: 'visible',
+	                                taghref: tag.href
+	                            };
+	                            if (i == 0) {
+	                                tab.visibility = 'visible';
+	                                tab.src = yoka.getPathUrl('image/pc_main_image_list.js', false);
+	                            } else {
+	                                tab.visibility = 'hidden';
+	                            }
+	                            self.tabItems.push(tab);
+	                        }
+	                    }
+	                }
+	            });
+	        },
+	        ready: function ready(e) {
+	            var vm = this;
+	            vm.$on('tabBar.onClick', function (e) {
+	                var detail = e.detail;
+	                nativeLog('$dispatch tabBar.onClick ' + detail.index);
 
-	        getOptions: function getOptions() {},
-
-	        changeSkin: function changeSkin(themetype) {
-	            if (this.themetype == 0) {
-	                this.textClass = 'dayclass';
-	            } else {
-	                this.textClass = 'nightclass';
-	            }
+	                var taghref = vm.tabItems[detail.index].taghref;
+	                storage.setItem('taghref', taghref, function (s) {
+	                    console.log('set [taghref]:' + (0, _stringify2.default)(s));
+	                });
+	            });
 	        }
 	    }
 	};}

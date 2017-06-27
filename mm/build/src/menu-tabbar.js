@@ -44,8 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(202)
-	var __weex_script__ = __webpack_require__(203)
+	var __weex_template__ = __webpack_require__(203)
+	var __weex_script__ = __webpack_require__(204)
 
 	__weex_define__('@weex-component/0089b3a931196ecaf467942f3b46c924', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2327,13 +2327,16 @@
 /* 199 */,
 /* 200 */,
 /* 201 */,
-/* 202 */
+/* 202 */,
+/* 203 */
 /***/ function(module, exports) {
 
 	module.exports = {
 	  "type": "div",
 	  "style": {
-	    "flexDirection": "column"
+	    "flexDirection": "column",
+	    "width": 750,
+	    "height": function () {return this.deviceHeight}
 	  },
 	  "children": [
 	    {
@@ -2346,7 +2349,7 @@
 	}
 
 /***/ },
-/* 203 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -2363,13 +2366,20 @@
 	var storage = __weex_require__('@weex-module/storage');
 	module.exports = {
 	    data: function () {return {
+	        deviceHeight: 0,
 	        tabItems: []
 	    }},
 	    created: function created() {
 	        var self = this;
+
+	        self.deviceHeight = 1300;
+	        console.log('deviceHeight==' + self.deviceHeight);
 	        self.refresh();
 	    },
 	    methods: {
+	        togglemenu: function togglemenu() {
+	            this._parent.toggle();
+	        },
 	        refresh: function refresh() {
 	            var self = this;
 	            weexJsoupModule.mleftmenu(yoka.getmm_m_main(), function (e) {
