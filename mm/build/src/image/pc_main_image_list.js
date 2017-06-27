@@ -45,11 +45,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(172)
-	__webpack_require__(228)
-	__webpack_require__(229)
-	var __weex_template__ = __webpack_require__(177)
-	var __weex_style__ = __webpack_require__(178)
-	var __weex_script__ = __webpack_require__(179)
+	__webpack_require__(177)
+	__webpack_require__(178)
+	var __weex_template__ = __webpack_require__(179)
+	var __weex_style__ = __webpack_require__(180)
+	var __weex_script__ = __webpack_require__(181)
 
 	__weex_define__('@weex-component/f1bb43a294c8ff05cd0593edb8fb52eb', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2037,8 +2037,8 @@
 	var BASE_URL = {
 	    //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
 	    //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-	    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
-	    HTTP: 'https://',//https:// http://
+	    IP: '192.168.1.15:8080',
+	    HTTP: 'http://',//https:// http://
 
 	};
 
@@ -2052,7 +2052,13 @@
 	    mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
 	    mm_m_search_url :"http://m.mm131.com/search.php?",
 	    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
-	    mm_pc : "http://www.mm131.com/"
+	    mm_pc : "http://www.mm131.com/",
+	    mm_pc_nav :"http://www.mm131.com/xinggan/"
+	};
+	exports.getmm_pc_nav = function () {
+	    var url = YOKA.mm_pc_nav;
+	    console.log('mm_pc_nav==' + url);
+	    return url;
 	};
 	exports.getmm_pc = function () {
 	    var url = YOKA.mm_pc;
@@ -3823,6 +3829,12 @@
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
+	var _stringify = __webpack_require__(91);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	__webpack_require__(5);
 	var yoka = __webpack_require__(87);
 	var weexEventModule = __weex_require__('@weex-module/weexEventModule');
@@ -3830,7 +3842,7 @@
 	module.exports = {
 	    created: function created() {
 	        this.platform = this.$getConfig().env.platform;
-	        console.log('tag==' + this.tag);
+	        console.log('gridtag==' + (0, _stringify2.default)(this.gridtag));
 	    },
 	    data: function () {return {
 	        platform: '',
@@ -4370,6 +4382,52 @@
 
 /***/ },
 /* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(155)
+	var __weex_template__ = __webpack_require__(169)
+	var __weex_style__ = __webpack_require__(170)
+	var __weex_script__ = __webpack_require__(171)
+
+	__weex_define__('@weex-component/pc_main_image_head', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(155)
+	var __weex_template__ = __webpack_require__(159)
+	var __weex_style__ = __webpack_require__(160)
+	var __weex_script__ = __webpack_require__(161)
+
+	__weex_define__('@weex-component/pc_main_image_foot', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+
+/***/ },
+/* 179 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4497,7 +4555,7 @@
 	}
 
 /***/ },
-/* 178 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4564,14 +4622,14 @@
 	}
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
-	__webpack_require__(227);
-	__webpack_require__(228);
-	__webpack_require__(229);
+	__webpack_require__(182);
+	__webpack_require__(177);
+	__webpack_require__(178);
 	__webpack_require__(172);
 	__webpack_require__(5);
 	__webpack_require__(93);
@@ -4658,32 +4716,35 @@
 
 
 /***/ },
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(201)
-	var __weex_style__ = __webpack_require__(202)
-	var __weex_script__ = __webpack_require__(203)
+	__webpack_require__(183)
+	var __weex_template__ = __webpack_require__(187)
+	var __weex_style__ = __webpack_require__(188)
+	var __weex_script__ = __webpack_require__(189)
+
+	__weex_define__('@weex-component/pcmainheadpager', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __weex_template__ = __webpack_require__(184)
+	var __weex_style__ = __webpack_require__(185)
+	var __weex_script__ = __webpack_require__(186)
 
 	__weex_define__('@weex-component/slider-item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -4700,7 +4761,7 @@
 
 
 /***/ },
-/* 201 */
+/* 184 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4717,7 +4778,7 @@
 	}
 
 /***/ },
-/* 202 */
+/* 185 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4728,7 +4789,7 @@
 	}
 
 /***/ },
-/* 203 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -4754,10 +4815,7 @@
 
 
 /***/ },
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */
+/* 187 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4795,7 +4853,7 @@
 	}
 
 /***/ },
-/* 208 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4817,13 +4875,13 @@
 	}
 
 /***/ },
-/* 209 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
 	__webpack_require__(5);
-	__webpack_require__(200);
+	__webpack_require__(183);
 	var yoka = __webpack_require__(87);
 	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');
 	module.exports = {
@@ -4861,92 +4919,6 @@
 
 	};}
 	/* generated by weex-loader */
-
-
-/***/ },
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(200)
-	var __weex_template__ = __webpack_require__(207)
-	var __weex_style__ = __webpack_require__(208)
-	var __weex_script__ = __webpack_require__(209)
-
-	__weex_define__('@weex-component/pcmainheadpager', [], function(__weex_require__, __weex_exports__, __weex_module__) {
-
-	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
-	    if (__weex_exports__.__esModule && __weex_exports__.default) {
-	      __weex_module__.exports = __weex_exports__.default
-	    }
-
-	    __weex_module__.exports.template = __weex_template__
-
-	    __weex_module__.exports.style = __weex_style__
-
-	})
-
-
-/***/ },
-/* 228 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(155)
-	var __weex_template__ = __webpack_require__(169)
-	var __weex_style__ = __webpack_require__(170)
-	var __weex_script__ = __webpack_require__(171)
-
-	__weex_define__('@weex-component/pc_main_image_head', [], function(__weex_require__, __weex_exports__, __weex_module__) {
-
-	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
-	    if (__weex_exports__.__esModule && __weex_exports__.default) {
-	      __weex_module__.exports = __weex_exports__.default
-	    }
-
-	    __weex_module__.exports.template = __weex_template__
-
-	    __weex_module__.exports.style = __weex_style__
-
-	})
-
-
-/***/ },
-/* 229 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(155)
-	var __weex_template__ = __webpack_require__(159)
-	var __weex_style__ = __webpack_require__(160)
-	var __weex_script__ = __webpack_require__(161)
-
-	__weex_define__('@weex-component/pc_main_image_foot', [], function(__weex_require__, __weex_exports__, __weex_module__) {
-
-	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
-	    if (__weex_exports__.__esModule && __weex_exports__.default) {
-	      __weex_module__.exports = __weex_exports__.default
-	    }
-
-	    __weex_module__.exports.template = __weex_template__
-
-	    __weex_module__.exports.style = __weex_style__
-
-	})
 
 
 /***/ }

@@ -44,10 +44,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(188)
-	var __weex_template__ = __webpack_require__(192)
-	var __weex_style__ = __webpack_require__(193)
-	var __weex_script__ = __webpack_require__(194)
+	__webpack_require__(204)
+	var __weex_template__ = __webpack_require__(208)
+	var __weex_style__ = __webpack_require__(209)
+	var __weex_script__ = __webpack_require__(210)
 
 	__weex_define__('@weex-component/278b6d0d5be9ed74f3a9c242ce7c2064', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2035,8 +2035,8 @@
 	var BASE_URL = {
 	    //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
 	    //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-	    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
-	    HTTP: 'https://',//https:// http://
+	    IP: '192.168.1.15:8080',
+	    HTTP: 'http://',//https:// http://
 
 	};
 
@@ -2050,7 +2050,13 @@
 	    mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
 	    mm_m_search_url :"http://m.mm131.com/search.php?",
 	    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
-	    mm_pc : "http://www.mm131.com/"
+	    mm_pc : "http://www.mm131.com/",
+	    mm_pc_nav :"http://www.mm131.com/xinggan/"
+	};
+	exports.getmm_pc_nav = function () {
+	    var url = YOKA.mm_pc_nav;
+	    console.log('mm_pc_nav==' + url);
+	    return url;
 	};
 	exports.getmm_pc = function () {
 	    var url = YOKA.mm_pc;
@@ -2311,12 +2317,28 @@
 /* 185 */,
 /* 186 */,
 /* 187 */,
-/* 188 */
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(189)
-	var __weex_style__ = __webpack_require__(190)
-	var __weex_script__ = __webpack_require__(191)
+	var __weex_template__ = __webpack_require__(205)
+	var __weex_style__ = __webpack_require__(206)
+	var __weex_script__ = __webpack_require__(207)
 
 	__weex_define__('@weex-component/m_left_menu_item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2333,7 +2355,7 @@
 
 
 /***/ },
-/* 189 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2366,7 +2388,7 @@
 	}
 
 /***/ },
-/* 190 */
+/* 206 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2408,7 +2430,7 @@
 	}
 
 /***/ },
-/* 191 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -2440,7 +2462,7 @@
 
 
 /***/ },
-/* 192 */
+/* 208 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2503,7 +2525,7 @@
 	}
 
 /***/ },
-/* 193 */
+/* 209 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2570,7 +2592,7 @@
 	}
 
 /***/ },
-/* 194 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -2581,7 +2603,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(188);
+	__webpack_require__(204);
 	__webpack_require__(5);
 	var yoka = __webpack_require__(87);
 	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');

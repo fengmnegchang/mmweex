@@ -2035,8 +2035,8 @@
 	var BASE_URL = {
 	    //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
 	    //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-	    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
-	    HTTP: 'https://',//https:// http://
+	    IP: '192.168.1.15:8080',
+	    HTTP: 'http://',//https:// http://
 
 	};
 
@@ -2050,7 +2050,13 @@
 	    mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
 	    mm_m_search_url :"http://m.mm131.com/search.php?",
 	    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
-	    mm_pc : "http://www.mm131.com/"
+	    mm_pc : "http://www.mm131.com/",
+	    mm_pc_nav :"http://www.mm131.com/xinggan/"
+	};
+	exports.getmm_pc_nav = function () {
+	    var url = YOKA.mm_pc_nav;
+	    console.log('mm_pc_nav==' + url);
+	    return url;
 	};
 	exports.getmm_pc = function () {
 	    var url = YOKA.mm_pc;
@@ -2427,6 +2433,12 @@
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
+	var _stringify = __webpack_require__(91);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	__webpack_require__(5);
 	var yoka = __webpack_require__(87);
 	var weexEventModule = __weex_require__('@weex-module/weexEventModule');
@@ -2434,7 +2446,7 @@
 	module.exports = {
 	    created: function created() {
 	        this.platform = this.$getConfig().env.platform;
-	        console.log('tag==' + this.tag);
+	        console.log('gridtag==' + (0, _stringify2.default)(this.gridtag));
 	    },
 	    data: function () {return {
 	        platform: '',

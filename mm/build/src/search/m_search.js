@@ -44,9 +44,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(213)
-	var __weex_style__ = __webpack_require__(214)
-	var __weex_script__ = __webpack_require__(215)
+	var __weex_template__ = __webpack_require__(222)
+	var __weex_style__ = __webpack_require__(223)
+	var __weex_script__ = __webpack_require__(224)
 
 	__weex_define__('@weex-component/1ee4f6e550cd91b89efbef8e1f03fc3c', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2034,8 +2034,8 @@
 	var BASE_URL = {
 	    //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
 	    //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-	    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
-	    HTTP: 'https://',//https:// http://
+	    IP: '192.168.1.15:8080',
+	    HTTP: 'http://',//https:// http://
 
 	};
 
@@ -2049,7 +2049,13 @@
 	    mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
 	    mm_m_search_url :"http://m.mm131.com/search.php?",
 	    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
-	    mm_pc : "http://www.mm131.com/"
+	    mm_pc : "http://www.mm131.com/",
+	    mm_pc_nav :"http://www.mm131.com/xinggan/"
+	};
+	exports.getmm_pc_nav = function () {
+	    var url = YOKA.mm_pc_nav;
+	    console.log('mm_pc_nav==' + url);
+	    return url;
 	};
 	exports.getmm_pc = function () {
 	    var url = YOKA.mm_pc;
@@ -3398,7 +3404,16 @@
 /* 210 */,
 /* 211 */,
 /* 212 */,
-/* 213 */
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -3466,7 +3481,7 @@
 	}
 
 /***/ },
-/* 214 */
+/* 223 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -3495,7 +3510,7 @@
 	}
 
 /***/ },
-/* 215 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';

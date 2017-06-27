@@ -44,10 +44,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(200)
-	var __weex_template__ = __webpack_require__(207)
-	var __weex_style__ = __webpack_require__(208)
-	var __weex_script__ = __webpack_require__(209)
+	__webpack_require__(183)
+	var __weex_template__ = __webpack_require__(187)
+	var __weex_style__ = __webpack_require__(188)
+	var __weex_script__ = __webpack_require__(189)
 
 	__weex_define__('@weex-component/12975655ea580bd23426fd0526489ad0', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2035,8 +2035,8 @@
 	var BASE_URL = {
 	    //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
 	    //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-	    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
-	    HTTP: 'https://',//https:// http://
+	    IP: '192.168.1.15:8080',
+	    HTTP: 'http://',//https:// http://
 
 	};
 
@@ -2050,7 +2050,13 @@
 	    mm_m_search :"http://m.mm131.com/search.php?text=%C3%C3%C3%C3&page=",
 	    mm_m_search_url :"http://m.mm131.com/search.php?",
 	    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
-	    mm_pc : "http://www.mm131.com/"
+	    mm_pc : "http://www.mm131.com/",
+	    mm_pc_nav :"http://www.mm131.com/xinggan/"
+	};
+	exports.getmm_pc_nav = function () {
+	    var url = YOKA.mm_pc_nav;
+	    console.log('mm_pc_nav==' + url);
+	    return url;
 	};
 	exports.getmm_pc = function () {
 	    var url = YOKA.mm_pc;
@@ -2292,29 +2298,12 @@
 /* 180 */,
 /* 181 */,
 /* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(201)
-	var __weex_style__ = __webpack_require__(202)
-	var __weex_script__ = __webpack_require__(203)
+	var __weex_template__ = __webpack_require__(184)
+	var __weex_style__ = __webpack_require__(185)
+	var __weex_script__ = __webpack_require__(186)
 
 	__weex_define__('@weex-component/slider-item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2331,7 +2320,7 @@
 
 
 /***/ },
-/* 201 */
+/* 184 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2348,7 +2337,7 @@
 	}
 
 /***/ },
-/* 202 */
+/* 185 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2359,7 +2348,7 @@
 	}
 
 /***/ },
-/* 203 */
+/* 186 */
 /***/ function(module, exports) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -2385,10 +2374,7 @@
 
 
 /***/ },
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */
+/* 187 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2426,7 +2412,7 @@
 	}
 
 /***/ },
-/* 208 */
+/* 188 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2448,13 +2434,13 @@
 	}
 
 /***/ },
-/* 209 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
 	__webpack_require__(5);
-	__webpack_require__(200);
+	__webpack_require__(183);
 	var yoka = __webpack_require__(87);
 	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');
 	module.exports = {

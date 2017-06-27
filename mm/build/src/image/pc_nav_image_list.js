@@ -44,35 +44,13 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(211)
-	var __weex_template__ = __webpack_require__(212)
-	var __weex_style__ = __webpack_require__(213)
-	var __weex_script__ = __webpack_require__(214)
+	__webpack_require__(162)
+	__webpack_require__(236)
+	var __weex_template__ = __webpack_require__(193)
+	var __weex_style__ = __webpack_require__(194)
+	var __weex_script__ = __webpack_require__(195)
 
-	__weex_define__('@weex-component/f5b025a78f1af9da12702ec9bff8cd99', [], function(__weex_require__, __weex_exports__, __weex_module__) {
-
-	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
-	    if (__weex_exports__.__esModule && __weex_exports__.default) {
-	      __weex_module__.exports = __weex_exports__.default
-	    }
-
-	    __weex_module__.exports.template = __weex_template__
-
-	    __weex_module__.exports.style = __weex_style__
-
-	})
-
-	__weex_bootstrap__('@weex-component/f5b025a78f1af9da12702ec9bff8cd99',undefined,undefined)
-
-/***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __weex_template__ = __webpack_require__(2)
-	var __weex_style__ = __webpack_require__(3)
-	var __weex_script__ = __webpack_require__(4)
-
-	__weex_define__('@weex-component/m_article_item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+	__weex_define__('@weex-component/1db40114607bc364be1409689b4ac7a3', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
 	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
 	    if (__weex_exports__.__esModule && __weex_exports__.default) {
@@ -85,167 +63,13 @@
 
 	})
 
+	__weex_bootstrap__('@weex-component/1db40114607bc364be1409689b4ac7a3',undefined,undefined)
 
 /***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "type": "div",
-	  "classList": function () {return ['itemClass', 'itemClass_' + (this.platform) + '-' + (this.skinType)]},
-	  "events": {
-	    "click": "towebdetail"
-	  },
-	  "children": [
-	    {
-	      "type": "div",
-	      "classList": [
-	        "news-bottom"
-	      ],
-	      "children": [
-	        {
-	          "type": "image",
-	          "classList": [
-	            "img"
-	          ],
-	          "attr": {
-	            "src": function () {return this.stockitem.dataimg}
-	          }
-	        },
-	        {
-	          "type": "text",
-	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
-	          "attr": {
-	            "value": function () {return this.stockitem.alt}
-	          }
-	        }
-	      ]
-	    },
-	    {
-	      "type": "div",
-	      "classList": function () {return ['lineClass', 'lineClass-' + (this.skinType)]}
-	    }
-	  ]
-	}
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "itemClass": {
-	    "marginTop": "5wx"
-	  },
-	  "itemClass_android-0": {
-	    "backgroundColor:active": "#dddddd"
-	  },
-	  "itemClass_android-1": {
-	    "backgroundColor:active": "#132237"
-	  },
-	  "news-bottom": {
-	    "flex": 1,
-	    "alignItems": "center"
-	  },
-	  "news-content": {
-	    "marginTop": "5wx",
-	    "marginLeft": "10wx",
-	    "marginRight": "10wx"
-	  },
-	  "numClass": {
-	    "fontSize": "11wx",
-	    "marginLeft": "3wx"
-	  },
-	  "tucao_numClass": {
-	    "fontSize": "12wx",
-	    "marginLeft": "4wx"
-	  },
-	  "textClass-0": {
-	    "color": "#BBBBBB"
-	  },
-	  "textClass-1": {
-	    "color": "#666666"
-	  },
-	  "img": {
-	    "width": 750,
-	    "height": 900
-	  },
-	  "lineClass": {
-	    "height": "2wx"
-	  },
-	  "lineClass-0": {
-	    "backgroundColor": "#eeeeee"
-	  },
-	  "lineClass-1": {
-	    "backgroundColor": "#0e1929"
-	  },
-	  "time": {
-	    "alignItems": "center",
-	    "justifyContent": "center",
-	    "height": "20wx",
-	    "marginTop": "10wx"
-	  },
-	  "createdt": {
-	    "fontSize": "18wx"
-	  },
-	  "createdt-0": {
-	    "color": "#666666"
-	  },
-	  "createdt-1": {
-	    "color": "#999999"
-	  }
-	}
-
-/***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = function(module, exports, __weex_require__){'use strict';
-
-	__webpack_require__(5);
-	var yoka = __webpack_require__(87);
-	var weexEventModule = __weex_require__('@weex-module/weexEventModule');
-	var weexNavigatorModule = __weex_require__('@weex-module/weexNavigatorModule');
-	module.exports = {
-	    created: function created() {
-	        this.platform = this.$getConfig().env.platform;
-	        console.log(this.stockitem.picture);
-	    },
-	    data: function () {return {
-	        is_ios_text: 0,
-	        platform: '',
-	        stockitem: {
-	            "href": "http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
-	            "alt": "这6个穿搭法则如果记住，时髦一整年没问题！",
-	            "dataimg": "http://p7.yokacdn.com/pic/YOKA/2017-04-11/U15P1TS1491893036_67597.jpg",
-	            postmeta: "",
-	            tag: "",
-	            meta: "",
-	            src: ''
-	        },
-	        skinType: 0
-	    }},
-	    methods: {
-	        towebdetail: function towebdetail(e) {
-
-	            var self = this;
-	            var name = "image/m_image_list";
-	            var url = yoka.getDefaultUrl(name);
-	            var taghref = self.stockitem.href;
-	            weexNavigatorModule.push({
-	                url: url,
-	                animated: "true",
-	                options: {
-	                    href: taghref,
-	                    title: self.stockitem.alt
-	                }
-	            }, function (event) {});
-	        }
-	    }
-	};}
-	/* generated by weex-loader */
-
-
-/***/ },
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2380,316 +2204,9 @@
 
 
 /***/ },
-/* 88 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "type": "div",
-	  "children": [
-	    {
-	      "type": "navbar",
-	      "style": {
-	        "width": 750
-	      },
-	      "attr": {
-	        "title": function () {return this.title},
-	        "type": function () {return this.skinType},
-	        "shownleft": function () {return this.showleft},
-	        "shown": function () {return this.shown}
-	      }
-	    },
-	    {
-	      "type": "list",
-	      "classList": [
-	        "list"
-	      ],
-	      "children": [
-	        {
-	          "type": "refresh",
-	          "classList": function () {return ['refresh-view', 'refresh-view-' + (this.skinType)]},
-	          "attr": {
-	            "display": function () {return this.refresh_display},
-	            "refreshing": function () {return this.refreshing}
-	          },
-	          "events": {
-	            "refresh": "onrefresh"
-	          },
-	          "children": [
-	            {
-	              "type": "loading-indicator",
-	              "classList": [
-	                "indicator"
-	              ]
-	            },
-	            {
-	              "type": "text",
-	              "classList": function () {return ['refresh-arrow', 'refresh-arrow-' + (this.skinType)]},
-	              "attr": {
-	                "value": "下拉刷新"
-	              }
-	            }
-	          ]
-	        },
-	        {
-	          "type": "cell",
-	          "append": "tree",
-	          "repeat": {
-	            "expression": function () {return this.stockArray},
-	            "value": "stockitem"
-	          },
-	          "children": [
-	            {
-	              "type": "m_article_item",
-	              "attr": {
-	                "stockitem": function () {return this.stockitem}
-	              }
-	            }
-	          ]
-	        },
-	        {
-	          "type": "loading",
-	          "classList": function () {return ['loading-view', 'loading-view-' + (this.skinType)]},
-	          "attr": {
-	            "display": function () {return this.showLoading}
-	          },
-	          "events": {
-	            "loading": "onloading"
-	          },
-	          "children": [
-	            {
-	              "type": "text",
-	              "classList": function () {return ['refresh-arrow', 'refresh-arrow-' + (this.skinType)]},
-	              "attr": {
-	                "value": "加载更多"
-	              }
-	            },
-	            {
-	              "type": "loading-indicator",
-	              "classList": [
-	                "indicator"
-	              ]
-	            }
-	          ]
-	        }
-	      ]
-	    }
-	  ]
-	}
-
-/***/ },
-/* 89 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "redNum": {
-	    "height": 120,
-	    "width": 720,
-	    "alignItems": "center",
-	    "justifyContent": "center",
-	    "flex": 1
-	  },
-	  "list": {
-	    "width": 750
-	  },
-	  "content_class-0": {
-	    "backgroundColor": "#f5f5f5"
-	  },
-	  "content_class-1": {
-	    "backgroundColor": "#15253d"
-	  },
-	  "loading-view": {
-	    "width": 750,
-	    "height": "50wx",
-	    "display": "flex",
-	    "MsFlexAlign": "center",
-	    "WebkitAlignItems": "center",
-	    "WebkitBoxAlign": "center",
-	    "alignItems": "center",
-	    "justifyContent": "center"
-	  },
-	  "loading-view-1": {
-	    "backgroundColor": "#15253d"
-	  },
-	  "loading-view-0": {
-	    "backgroundColor": "#f5f5f5"
-	  },
-	  "refresh-arrow": {
-	    "marginTop": "3wx",
-	    "height": "12wx",
-	    "width": "200wx",
-	    "fontSize": "12wx",
-	    "textAlign": "center",
-	    "alignItems": "center"
-	  },
-	  "refresh-arrow-0": {
-	    "color": "#BBBBBB"
-	  },
-	  "refresh-arrow-1": {
-	    "color": "#666666"
-	  },
-	  "refresh-view": {
-	    "width": 750,
-	    "height": "40wx",
-	    "display": "flex",
-	    "MsFlexAlign": "center",
-	    "WebkitAlignItems": "center",
-	    "WebkitBoxAlign": "center",
-	    "alignItems": "center",
-	    "justifyContent": "center"
-	  },
-	  "refresh-view-0": {
-	    "backgroundColor": "#f5f5f5"
-	  },
-	  "refresh-view-1": {
-	    "backgroundColor": "#15253d"
-	  },
-	  "indicator": {
-	    "height": "25wx",
-	    "width": "25wx",
-	    "color": "#889967"
-	  },
-	  "divUnReadClass": {
-	    "flex": 1,
-	    "alignItems": "center",
-	    "justifyContent": "center",
-	    "flexDirection": "row",
-	    "paddingTop": "20wx"
-	  },
-	  "unReadtextlass": {
-	    "fontSize": "14wx"
-	  },
-	  "unReadtextlass-0": {
-	    "color": "#666666",
-	    "fontSize": "14wx"
-	  },
-	  "unReadtextlass-1": {
-	    "color": "#999999",
-	    "fontSize": "14wx"
-	  },
-	  "unReadNumclass": {
-	    "marginLeft": "5wx",
-	    "marginRight": "5wx",
-	    "fontSize": "14wx"
-	  },
-	  "unReadNumclass-0": {
-	    "color": "#1191f6",
-	    "fontSize": "14wx"
-	  },
-	  "unReadNumclass-1": {
-	    "color": "#005e91",
-	    "fontSize": "14wx"
-	  }
-	}
-
-/***/ },
-/* 90 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = function(module, exports, __weex_require__){'use strict';
-
-	var _stringify = __webpack_require__(91);
-
-	var _stringify2 = _interopRequireDefault(_stringify);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	__webpack_require__(93);
-	__webpack_require__(5);
-	__webpack_require__(1);
-	var yoka = __webpack_require__(87);
-	var stream = __weex_require__('@weex-module/stream');
-	var modal = __weex_require__('@weex-module/modal');
-	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');
-	var storage = __weex_require__('@weex-module/storage');
-	module.exports = {
-
-	    data: function () {return {
-	        refreshing: 'false',
-	        refresh_display: 'show',
-	        stockArray: [],
-	        msg: '下拉刷新',
-	        pageNo: 1,
-	        skinType: 0,
-	        showLoading: 'hide',
-	        screenHeight: 0,
-	        platform: '',
-	        title: 'MM131主列表',
-	        showleft: true,
-	        shown: true,
-	        taghref: yoka.getmm_m_main()
-	    }},
-	    created: function created() {
-	        var self = this;
-	        this.platform = this.$getConfig().env.platform;
-
-
-	        storage.getItem('taghref', function (s) {
-	            console.log('get taghref result:' + (0, _stringify2.default)(s));
-	            var staghref = s.data;
-	            if (staghref != undefined) {
-	                self.taghref = staghref;
-	            }
-	            console.log('taghref==' + self.taghref);
-	            self.refresh();
-	        });
-	    },
-	    methods: {
-	        togglemenu: function togglemenu() {
-	            this._parent.toggle();
-	        },
-	        onright: function onright() {
-	            this._parent.onright();
-	        },
-	        onloading: function onloading(e) {
-	            console.log('onloading');
-	            var self = this;
-	            self.showLoading = 'show';
-	            self.pageNo = self.pageNo + 1;
-	            self.refresh();
-	        },
-
-	        onrefresh: function onrefresh(e) {
-	            var self = this;
-	            self.msg = '下拉刷新';
-	            self.refresh_display = 'show';
-	            self.refresh();
-	        },
-
-	        refresh: function refresh() {
-	            var self = this;
-	            var url = self.taghref;
-	            var params = {
-	                url: url,
-	                pageNo: self.pageNo
-	            };
-	            weexJsoupModule.mMArticle(params, function (e) {
-	                self.refresh_display = 'hide';
-	                self.showLoading = 'hide';
-	                self.refreshing = "false";
-	                var json;
-	                json = eval('(' + e + ')');
-	                console.log('json===' + json);
-	                if (self.pageNo == 1) {
-	                    self.stockArray.splice(0, self.stockArray.length);
-	                }
-	                if (json.list) {
-	                    if (json.list && json.list.length > 0) {
-	                        for (var i = 0; i < json.list.length; i++) {
-	                            var tag = json.list[i];
-	                            self.stockArray.push(tag);
-	                        }
-	                    }
-	                }
-	            });
-	        }
-
-	    }
-
-	};}
-	/* generated by weex-loader */
-
-
-/***/ },
+/* 88 */,
+/* 89 */,
+/* 90 */,
 /* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3845,17 +3362,317 @@
 /* 152 */,
 /* 153 */,
 /* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */,
-/* 158 */,
+/* 155 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __weex_template__ = __webpack_require__(156)
+	var __weex_style__ = __webpack_require__(157)
+	var __weex_script__ = __webpack_require__(158)
+
+	__weex_define__('@weex-component/pc_main_image_head_item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+
+/***/ },
+/* 156 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "type": "div",
+	  "classList": function () {return ['itemClass', 'itemClass_' + (this.platform) + '-' + (this.skinType)]},
+	  "children": [
+	    {
+	      "type": "div",
+	      "classList": [
+	        "news-bottom"
+	      ],
+	      "children": [
+	        {
+	          "type": "text",
+	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
+	          "events": {
+	            "click": function ($event) {this.towebdetail(this.tag.href,$event)}
+	          },
+	          "attr": {
+	            "value": function () {return (this.tag.id) + ' ' + (this.tag.alt)}
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "classList": function () {return ['lineClass', 'lineClass-' + (this.skinType)]}
+	    }
+	  ]
+	}
+
+/***/ },
+/* 157 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "itemClass": {
+	    "margin": 10
+	  },
+	  "news-bottom": {
+	    "flex": 1,
+	    "alignItems": "center",
+	    "flexDirection": "row",
+	    "margin": 5
+	  },
+	  "tucao_numClass": {
+	    "fontSize": "12wx",
+	    "marginLeft": "4wx",
+	    "flex": 1,
+	    "alignItems": "flex-start",
+	    "padding": 10
+	  },
+	  "textClass-0": {
+	    "color:active": "#666666",
+	    "backgroundColor:active": "#dddddd"
+	  },
+	  "textClass-1": {
+	    "color:active": "#666666",
+	    "backgroundColor:active": "#132237"
+	  },
+	  "lineClass": {
+	    "height": 2
+	  },
+	  "lineClass-0": {
+	    "backgroundColor": "#eeeeee"
+	  },
+	  "lineClass-1": {
+	    "backgroundColor": "#0e1929"
+	  }
+	}
+
+/***/ },
+/* 158 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function(module, exports, __weex_require__){'use strict';
+
+	__webpack_require__(5);
+	var yoka = __webpack_require__(87);
+	var weexEventModule = __weex_require__('@weex-module/weexEventModule');
+
+	module.exports = {
+	    created: function created() {
+	        this.platform = this.$getConfig().env.platform;
+	    },
+	    data: function () {return {
+	        platform: '',
+	        tag: {
+	            "href": "http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
+	            "alt": "这6个穿搭法则如果记住，时髦一整年没问题！",
+	            id: 0
+	        },
+
+	        skinType: 0
+	    }},
+	    methods: {
+	        towebdetail: function towebdetail(e) {
+	            weexEventModule.startWebViewActivity(e);
+	        }
+	    }
+	};}
+	/* generated by weex-loader */
+
+
+/***/ },
 /* 159 */,
 /* 160 */,
 /* 161 */,
-/* 162 */,
-/* 163 */,
-/* 164 */,
-/* 165 */,
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __weex_template__ = __webpack_require__(163)
+	var __weex_style__ = __webpack_require__(164)
+	var __weex_script__ = __webpack_require__(165)
+
+	__weex_define__('@weex-component/pc_main_image_grid_item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+
+/***/ },
+/* 163 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "type": "div",
+	  "classList": function () {return ['itemClass', 'itemClass_' + (this.platform) + '-' + (this.skinType)]},
+	  "children": [
+	    {
+	      "type": "div",
+	      "classList": [
+	        "news-bottom"
+	      ],
+	      "events": {
+	        "click": function ($event) {this.towebdetail(this.gridtag.href,$event)}
+	      },
+	      "children": [
+	        {
+	          "type": "text",
+	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
+	          "attr": {
+	            "value": function () {return this.gridtag.alt}
+	          }
+	        },
+	        {
+	          "type": "image",
+	          "classList": [
+	            "img"
+	          ],
+	          "attr": {
+	            "src": function () {return this.gridtag.src}
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "classList": [
+	        "news-bottom"
+	      ],
+	      "events": {
+	        "click": function ($event) {this.towebdetail(this.gridtag.href2,$event)}
+	      },
+	      "children": [
+	        {
+	          "type": "text",
+	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
+	          "attr": {
+	            "value": function () {return this.gridtag.alt2}
+	          }
+	        },
+	        {
+	          "type": "image",
+	          "classList": [
+	            "img"
+	          ],
+	          "attr": {
+	            "src": function () {return this.gridtag.src2}
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "classList": function () {return ['lineClass', 'lineClass-' + (this.skinType)]}
+	    }
+	  ]
+	}
+
+/***/ },
+/* 164 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "itemClass": {
+	    "flex": 1,
+	    "alignItems": "center",
+	    "flexDirection": "row"
+	  },
+	  "news-bottom": {
+	    "flex": 1,
+	    "alignItems": "center",
+	    "flexDirection": "column"
+	  },
+	  "tucao_numClass": {
+	    "fontSize": "12wx",
+	    "marginLeft": "4wx",
+	    "flex": 1,
+	    "alignItems": "flex-start",
+	    "padding": 10
+	  },
+	  "textClass-0": {
+	    "color:active": "#666666",
+	    "backgroundColor:active": "#dddddd"
+	  },
+	  "textClass-1": {
+	    "color:active": "#666666",
+	    "backgroundColor:active": "#132237"
+	  },
+	  "lineClass": {
+	    "height": 2
+	  },
+	  "lineClass-0": {
+	    "backgroundColor": "#eeeeee"
+	  },
+	  "lineClass-1": {
+	    "backgroundColor": "#0e1929"
+	  },
+	  "img": {
+	    "width": 300,
+	    "flex": 1,
+	    "height": 300
+	  }
+	}
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function(module, exports, __weex_require__){'use strict';
+
+	var _stringify = __webpack_require__(91);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	__webpack_require__(5);
+	var yoka = __webpack_require__(87);
+	var weexEventModule = __weex_require__('@weex-module/weexEventModule');
+
+	module.exports = {
+	    created: function created() {
+	        this.platform = this.$getConfig().env.platform;
+	        console.log('gridtag==' + (0, _stringify2.default)(this.gridtag));
+	    },
+	    data: function () {return {
+	        platform: '',
+	        gridtag: {
+	            "href": "http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
+	            "src": "",
+	            alt: '',
+	            "href2": "http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
+	            "src2": "",
+	            alt2: ''
+	        },
+
+	        skinType: 0
+	    }},
+	    methods: {
+	        towebdetail: function towebdetail(e) {
+	            weexEventModule.startWebViewActivity(e);
+	        }
+	    }
+	};}
+	/* generated by weex-loader */
+
+
+/***/ },
 /* 166 */,
 /* 167 */,
 /* 168 */,
@@ -3880,150 +3697,7 @@
 /* 187 */,
 /* 188 */,
 /* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __weex_template__ = __webpack_require__(205)
-	var __weex_style__ = __webpack_require__(206)
-	var __weex_script__ = __webpack_require__(207)
-
-	__weex_define__('@weex-component/m_left_menu_item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
-
-	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
-	    if (__weex_exports__.__esModule && __weex_exports__.default) {
-	      __weex_module__.exports = __weex_exports__.default
-	    }
-
-	    __weex_module__.exports.template = __weex_template__
-
-	    __weex_module__.exports.style = __weex_style__
-
-	})
-
-
-/***/ },
-/* 205 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "type": "div",
-	  "classList": function () {return ['itemClass', 'itemClass_' + (this.platform) + '-' + (this.skinType)]},
-	  "children": [
-	    {
-	      "type": "div",
-	      "classList": [
-	        "news-bottom"
-	      ],
-	      "children": [
-	        {
-	          "type": "text",
-	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
-	          "events": {
-	            "click": function ($event) {this.towebdetail(this.tag.href,$event)}
-	          },
-	          "attr": {
-	            "value": function () {return this.tag.title}
-	          }
-	        }
-	      ]
-	    },
-	    {
-	      "type": "div",
-	      "classList": function () {return ['lineClass', 'lineClass-' + (this.skinType)]}
-	    }
-	  ]
-	}
-
-/***/ },
-/* 206 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "itemClass": {
-	    "margin": 10
-	  },
-	  "news-bottom": {
-	    "flex": 1,
-	    "alignItems": "center",
-	    "flexDirection": "row",
-	    "margin": 20
-	  },
-	  "tucao_numClass": {
-	    "fontSize": "12wx",
-	    "marginLeft": "4wx",
-	    "flex": 1,
-	    "alignItems": "center",
-	    "textAlign": "center",
-	    "margin": 10,
-	    "padding": 10
-	  },
-	  "textClass-0": {
-	    "color:active": "#666666",
-	    "backgroundColor:active": "#dddddd"
-	  },
-	  "textClass-1": {
-	    "color:active": "#666666",
-	    "backgroundColor:active": "#132237"
-	  },
-	  "lineClass": {
-	    "height": 2
-	  },
-	  "lineClass-0": {
-	    "backgroundColor": "#eeeeee"
-	  },
-	  "lineClass-1": {
-	    "backgroundColor": "#0e1929"
-	  }
-	}
-
-/***/ },
-/* 207 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = function(module, exports, __weex_require__){'use strict';
-
-	__webpack_require__(5);
-	var yoka = __webpack_require__(87);
-	var weexEventModule = __weex_require__('@weex-module/weexEventModule');
-
-	module.exports = {
-	    created: function created() {
-	        this.platform = this.$getConfig().env.platform;
-	    },
-	    data: function () {return {
-	        platform: '',
-	        tag: {
-	            "href": "http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
-	            "title": "这6个穿搭法则如果记住，时髦一整年没问题！"
-	        },
-
-	        skinType: 0
-	    }},
-	    methods: {
-	        towebdetail: function towebdetail(e) {
-	            weexEventModule.startWebViewActivity(e);
-	        }
-	    }
-	};}
-	/* generated by weex-loader */
-
-
-/***/ },
-/* 208 */
+/* 190 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4073,7 +3747,7 @@
 	          },
 	          "children": [
 	            {
-	              "type": "m_left_menu_item",
+	              "type": "pc_main_image_head_item",
 	              "attr": {
 	                "tag": function () {return this.tag}
 	              }
@@ -4086,7 +3760,7 @@
 	}
 
 /***/ },
-/* 209 */
+/* 191 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4153,18 +3827,12 @@
 	}
 
 /***/ },
-/* 210 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
-	var _stringify = __webpack_require__(91);
-
-	var _stringify2 = _interopRequireDefault(_stringify);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	__webpack_require__(204);
+	__webpack_require__(155);
 	__webpack_require__(5);
 	var yoka = __webpack_require__(87);
 	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');
@@ -4175,7 +3843,9 @@
 	        refreshing: 'false',
 	        refresh_display: 'show',
 	        skinType: 0,
-	        showLoading: 'hide'
+	        showLoading: 'hide',
+	        href: yoka.getmm_pc_nav(),
+	        cheight: 0
 	    }},
 	    methods: {
 	        closemenu: function closemenu() {
@@ -4188,7 +3858,7 @@
 	        },
 	        refresh: function refresh() {
 	            var self = this;
-	            weexJsoupModule.mleftmenu(yoka.getmm_m_main(), function (e) {
+	            weexJsoupModule.pcnavimagehead(self.href, function (e) {
 	                self.refresh_display = 'hide';
 	                self.showLoading = 'hide';
 	                self.refreshing = "false";
@@ -4200,6 +3870,7 @@
 	                    if (json.list && json.list.length > 0) {
 	                        for (var i = 0; i < json.list.length; i++) {
 	                            var tag = json.list[i];
+	                            tag.id = i;
 	                            self.tags.push(tag);
 	                        }
 	                    }
@@ -4209,15 +3880,12 @@
 	    },
 	    created: function created() {
 	        var self = this;
-	        storage.getItem('taghref', function (s) {
-	            console.log('get taghref result:' + (0, _stringify2.default)(s));
-	            var staghref = s.data;
-	            if (staghref != undefined) {
-	                self.taghref = staghref;
-	            }
-	            console.log('taghref==' + self.taghref);
-	            self.refresh();
-	        });
+
+	        var shref = this.$getConfig().href;
+	        if (shref != undefined) {
+	            self.href = shref;
+	        }
+	        self.refresh();
 	    },
 	    ready: function ready() {}
 
@@ -4226,79 +3894,107 @@
 
 
 /***/ },
-/* 211 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(204)
-	var __weex_template__ = __webpack_require__(208)
-	var __weex_style__ = __webpack_require__(209)
-	var __weex_script__ = __webpack_require__(210)
-
-	__weex_define__('@weex-component/m_left_menu', [], function(__weex_require__, __weex_exports__, __weex_module__) {
-
-	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
-	    if (__weex_exports__.__esModule && __weex_exports__.default) {
-	      __weex_module__.exports = __weex_exports__.default
-	    }
-
-	    __weex_module__.exports.template = __weex_template__
-
-	    __weex_module__.exports.style = __weex_style__
-
-	})
-
-
-/***/ },
-/* 212 */
+/* 193 */
 /***/ function(module, exports) {
 
 	module.exports = {
 	  "type": "div",
-	  "classList": [
-	    "wrapper"
-	  ],
 	  "children": [
 	    {
-	      "type": "div",
-	      "id": "menu",
-	      "classList": function () {return ['menu', 'menu-' + (this.showmenu)]},
+	      "type": "navbar",
 	      "style": {
-	        "height": function () {return this.deviceHeight}
+	        "width": 750
 	      },
-	      "events": {
-	        "click": "close"
-	      },
-	      "children": [
-	        {
-	          "type": "div",
-	          "classList": function () {return ['menu-header', 'menu-header-' + (this.showmenu)]},
-	          "children": [
-	            {
-	              "type": "m_left_menu"
-	            }
-	          ]
-	        }
-	      ]
+	      "attr": {
+	        "title": function () {return this.title},
+	        "type": function () {return this.skinType},
+	        "leftsrc": function () {return this.leftsrc},
+	        "shownleft": function () {return this.showleft},
+	        "shown": function () {return this.shown}
+	      }
 	    },
 	    {
-	      "type": "div",
-	      "id": "main",
-	      "classList": function () {return ['panel', 'panel-' + (this.showmenu)]},
-	      "style": {
-	        "height": function () {return this.deviceHeight}
-	      },
-	      "events": {
-	        "click": "toggle"
-	      },
+	      "type": "list",
+	      "classList": [
+	        "list"
+	      ],
 	      "children": [
 	        {
-	          "type": "div",
-	          "classList": [
-	            "btn-hamburger"
-	          ],
+	          "type": "refresh",
+	          "classList": function () {return ['refresh-view', 'refresh-view-' + (this.skinType)]},
+	          "attr": {
+	            "display": function () {return this.refresh_display},
+	            "refreshing": function () {return this.refreshing}
+	          },
+	          "events": {
+	            "refresh": "onrefresh"
+	          },
 	          "children": [
 	            {
-	              "type": "m_article"
+	              "type": "loading-indicator",
+	              "classList": [
+	                "indicator"
+	              ]
+	            },
+	            {
+	              "type": "text",
+	              "classList": function () {return ['refresh-arrow', 'refresh-arrow-' + (this.skinType)]},
+	              "attr": {
+	                "value": "下拉刷新"
+	              }
+	            }
+	          ]
+	        },
+	        {
+	          "type": "cell",
+	          "append": "tree",
+	          "repeat": {
+	            "expression": function () {return this.tags},
+	            "value": "tag"
+	          },
+	          "events": {
+	            "click": "closemenu"
+	          },
+	          "children": [
+	            {
+	              "type": "pc_main_image_grid_item",
+	              "attr": {
+	                "gridtag": function () {return this.tag}
+	              }
+	            }
+	          ]
+	        },
+	        {
+	          "type": "cell",
+	          "append": "tree",
+	          "children": [
+	            {
+	              "type": "pc_nav_image_head"
+	            }
+	          ]
+	        },
+	        {
+	          "type": "loading",
+	          "classList": function () {return ['loading-view', 'loading-view-' + (this.skinType)]},
+	          "attr": {
+	            "display": function () {return this.showLoading}
+	          },
+	          "events": {
+	            "loading": "onloading"
+	          },
+	          "children": [
+	            {
+	              "type": "text",
+	              "classList": function () {return ['refresh-arrow', 'refresh-arrow-' + (this.skinType)]},
+	              "attr": {
+	                "value": "加载更多"
+	              }
+	            },
+	            {
+	              "type": "loading-indicator",
+	              "classList": [
+	                "indicator"
+	              ]
 	            }
 	          ]
 	        }
@@ -4308,121 +4004,229 @@
 	}
 
 /***/ },
-/* 213 */
+/* 194 */
 /***/ function(module, exports) {
 
 	module.exports = {
-	  "wrapper": {
-	    "flexDirection": "row"
-	  },
-	  "panel": {
+	  "list": {
 	    "width": 750
 	  },
-	  "panel-0": {
-	    "left": 0
+	  "content_class-0": {
+	    "backgroundColor": "#f5f5f5"
 	  },
-	  "panel-1": {
-	    "left": 500
+	  "content_class-1": {
+	    "backgroundColor": "#15253d"
 	  },
-	  "menu": {
-	    "backgroundColor": "#dddddd",
-	    "right": -750,
-	    "position": "absolute",
+	  "loading-view": {
 	    "width": 750,
-	    "alignItems": "flex-start",
-	    "justifyContent": "flex-start"
+	    "height": "50wx",
+	    "display": "flex",
+	    "MsFlexAlign": "center",
+	    "WebkitAlignItems": "center",
+	    "WebkitBoxAlign": "center",
+	    "alignItems": "center",
+	    "justifyContent": "center"
 	  },
-	  "menu-0": {
-	    "right": -750
+	  "loading-view-1": {
+	    "backgroundColor": "#15253d"
 	  },
-	  "menu-1": {
-	    "right": 150
+	  "loading-view-0": {
+	    "backgroundColor": "#f5f5f5"
 	  },
-	  "btn-hamburger": {
-	    "top": 0,
-	    "right": 0,
-	    "bottom": 0,
-	    "left": 0,
-	    "flexDirection": "row"
+	  "refresh-arrow": {
+	    "marginTop": "3wx",
+	    "height": "12wx",
+	    "width": "200wx",
+	    "fontSize": "12wx",
+	    "textAlign": "center",
+	    "alignItems": "center"
 	  },
-	  "tooltip": {
-	    "fontSize": 30,
-	    "color": "#000000"
+	  "refresh-arrow-0": {
+	    "color": "#BBBBBB"
 	  },
-	  "menu-header": {
-	    "padding": 20,
-	    "alignItems": "flex-start",
-	    "justifyContent": "flex-start",
-	    "position": "absolute"
+	  "refresh-arrow-1": {
+	    "color": "#666666"
 	  },
-	  "menu-header-0": {
-	    "right": 0
+	  "refresh-view": {
+	    "width": 750,
+	    "height": "40wx",
+	    "display": "flex",
+	    "MsFlexAlign": "center",
+	    "WebkitAlignItems": "center",
+	    "WebkitBoxAlign": "center",
+	    "alignItems": "center",
+	    "justifyContent": "center"
+	  },
+	  "refresh-view-0": {
+	    "backgroundColor": "#f5f5f5"
+	  },
+	  "refresh-view-1": {
+	    "backgroundColor": "#15253d"
+	  },
+	  "indicator": {
+	    "height": "25wx",
+	    "width": "25wx",
+	    "color": "#889967"
 	  }
 	}
 
 /***/ },
-/* 214 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
-	var yoka = __webpack_require__(87);
-	__webpack_require__(211);
-	__webpack_require__(215);
+	__webpack_require__(162);
+	__webpack_require__(236);
 	__webpack_require__(5);
+	__webpack_require__(93);
+	var yoka = __webpack_require__(87);
+	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');
+	var storage = __weex_require__('@weex-module/storage');
 	var weexNavigatorModule = __weex_require__('@weex-module/weexNavigatorModule');
 	module.exports = {
 	    data: function () {return {
-	        srcmenu: yoka.getUrl('html/images/menu.png'),
-	        showmenu: 0,
-	        deviceHeight: 0,
-	        platform: ''
+	        tags: [],
+	        refreshing: 'false',
+	        refresh_display: 'show',
+	        skinType: 0,
+	        showLoading: 'hide',
+	        pageNo: 1,
+	        title: '',
+	        showleft: true,
+	        shown: false,
+	        leftsrc: './images/back.png',
+	        href: yoka.getmm_pc_nav()
 
 	    }},
+	    methods: {
+	        togglemenu: function togglemenu(e) {
+	            var params = {
+	                'animated': 'true'
+	            };
+	            weexNavigatorModule.pop(params, function (event) {});
+	        },
+	        closemenu: function closemenu() {
+	            this._parent.close();
+	        },
+	        onloading: function onloading(e) {
+	            console.log('onloading');
+	            var self = this;
+	            self.showLoading = 'show';
+	            self.pageNo = self.pageNo + 1;
+	            self.refresh();
+	        },
+	        onrefresh: function onrefresh(e) {
+	            var self = this;
+	            self.refresh_display = 'show';
+	            self.pageNo = 1;
+	            self.refresh();
+	        },
+	        refresh: function refresh() {
+	            var self = this;
+	            var param = {
+	                url: self.href,
+	                pageNo: self.pageNo
+	            };
+	            weexJsoupModule.pcnavimagelist(param, function (e) {
+	                self.refresh_display = 'hide';
+	                self.showLoading = 'hide';
+	                self.refreshing = "false";
+	                var json;
+	                json = eval('(' + e + ')');
+	                console.log('json===' + json);
+	                if (self.pageNo == 1) {
+	                    self.tags.splice(0, self.tags.length);
+	                }
+	                if (json.list) {
+	                    if (json.list && json.list.length > 0) {
+	                        for (var i = 0; i < json.list.length; i += 2) {
+	                            var tag = json.list[i];
+	                            var tag2 = json.list[i + 1];
+	                            if (tag2 == undefined) {
+	                                tag2 = tag;
+	                            }
+	                            var gridtag = {
+	                                href: tag.href,
+	                                alt: tag.alt,
+	                                src: tag.src,
+
+	                                href2: tag2.href,
+	                                alt2: tag2.alt,
+	                                src2: tag2.src
+	                            };
+	                            self.tags.push(gridtag);
+	                        }
+	                    }
+	                }
+	            });
+	        }
+	    },
 	    created: function created() {
 	        var self = this;
-	        self.platform = self.$getConfig().env.platform;
-	        self.deviceHeight = self.$getConfig().env.deviceHeight;
-	    },
-	    ready: function ready() {
-	        var self = this;
-	    },
 
-	    methods: {
-	        toggle: function toggle(e) {
-	            if (this.showmenu == 0) {
-	                this.showmenu = 1;
-	            } else {
-	                this.showmenu = 0;
-	            }
-	        },
-	        close: function close(e) {
-	            this.showmenu = 0;
-	        },
-	        onright: function onright(e) {
-	            var name = "search/m_search";
-	            var url = yoka.getDefaultUrl(name);
-	            weexNavigatorModule.push({
-	                url: url,
-	                animated: "true"
-	            }, function (e) {});
+	        var shref = this.$getConfig().href;
+	        if (shref != undefined) {
+	            self.href = shref;
 	        }
+	        self.refresh();
+	    },
+	    ready: function ready() {}
 
-	    }
 	};}
 	/* generated by weex-loader */
 
 
 /***/ },
-/* 215 */
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1)
-	var __weex_template__ = __webpack_require__(88)
-	var __weex_style__ = __webpack_require__(89)
-	var __weex_script__ = __webpack_require__(90)
+	__webpack_require__(155)
+	var __weex_template__ = __webpack_require__(190)
+	var __weex_style__ = __webpack_require__(191)
+	var __weex_script__ = __webpack_require__(192)
 
-	__weex_define__('@weex-component/m_article', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+	__weex_define__('@weex-component/pc_nav_image_head', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
 	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
 	    if (__weex_exports__.__esModule && __weex_exports__.default) {
