@@ -44,11 +44,12 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(148)
-	var __weex_style__ = __webpack_require__(149)
-	var __weex_script__ = __webpack_require__(150)
+	__webpack_require__(229)
+	var __weex_template__ = __webpack_require__(233)
+	var __weex_style__ = __webpack_require__(234)
+	var __weex_script__ = __webpack_require__(235)
 
-	__weex_define__('@weex-component/976b7f315b1566269f8a1d7ede013786', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+	__weex_define__('@weex-component/a094d9af937d94820fe8bcd159bbd31d', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
 	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
 	    if (__weex_exports__.__esModule && __weex_exports__.default) {
@@ -61,7 +62,7 @@
 
 	})
 
-	__weex_bootstrap__('@weex-component/976b7f315b1566269f8a1d7ede013786',undefined,undefined)
+	__weex_bootstrap__('@weex-component/a094d9af937d94820fe8bcd159bbd31d',undefined,undefined)
 
 /***/ },
 /* 1 */,
@@ -2269,21 +2270,124 @@
 /* 145 */,
 /* 146 */,
 /* 147 */,
-/* 148 */
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __weex_template__ = __webpack_require__(230)
+	var __weex_style__ = __webpack_require__(231)
+	var __weex_script__ = __webpack_require__(232)
+
+	__weex_define__('@weex-component/pc_image_head_item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+
+/***/ },
+/* 230 */
 /***/ function(module, exports) {
 
 	module.exports = {
 	  "type": "div",
 	  "classList": function () {return ['itemClass', 'itemClass_' + (this.platform) + '-' + (this.skinType)]},
+	  "events": {
+	    "click": function ($event) {this.towebdetail(this.tag.href,$event)}
+	  },
 	  "children": [
 	    {
 	      "type": "div",
 	      "classList": [
 	        "news-bottom"
 	      ],
-	      "events": {
-	        "click": function ($event) {this.towebdetail(this.tag.href,$event)}
-	      },
 	      "children": [
 	        {
 	          "type": "text",
@@ -2291,14 +2395,35 @@
 	          "attr": {
 	            "value": function () {return this.tag.alt}
 	          }
-	        },
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "classList": [
+	        "news-bottom"
+	      ],
+	      "children": [
 	        {
-	          "type": "image",
-	          "classList": [
-	            "img"
-	          ],
+	          "type": "text",
+	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
 	          "attr": {
-	            "src": function () {return this.tag.dataimg}
+	            "value": function () {return this.tag.postmeta}
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "classList": [
+	        "news-bottom"
+	      ],
+	      "children": [
+	        {
+	          "type": "text",
+	          "classList": function () {return ['tucao_numClass', 'textClass-' + (this.skinType)]},
+	          "attr": {
+	            "value": function () {return this.tag.meta}
 	          }
 	        }
 	      ]
@@ -2311,14 +2436,18 @@
 	}
 
 /***/ },
-/* 149 */
+/* 231 */
 /***/ function(module, exports) {
 
 	module.exports = {
+	  "itemClass": {
+	    "margin": 5
+	  },
 	  "news-bottom": {
 	    "flex": 1,
 	    "alignItems": "center",
-	    "flexDirection": "column"
+	    "flexDirection": "row",
+	    "margin": 5
 	  },
 	  "tucao_numClass": {
 	    "fontSize": "12wx",
@@ -2343,16 +2472,11 @@
 	  },
 	  "lineClass-1": {
 	    "backgroundColor": "#0e1929"
-	  },
-	  "img": {
-	    "width": 750,
-	    "flex": 1,
-	    "height": 900
 	  }
 	}
 
 /***/ },
-/* 150 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
@@ -2369,8 +2493,10 @@
 	        platform: '',
 	        tag: {
 	            "href": "http://www.yoka.com/fashion/edittj/2017/0410/50473001074747.shtml",
-	            "dataimg": "",
-	            alt: ''
+	            "alt": "这6个穿搭法则如果记住，时髦一整年没问题！",
+	            postmeta: '',
+	            tag: '',
+	            meta: ''
 	        },
 
 	        skinType: 0
@@ -2380,6 +2506,201 @@
 	            weexEventModule.startWebViewActivity(e);
 	        }
 	    }
+	};}
+	/* generated by weex-loader */
+
+
+/***/ },
+/* 233 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "type": "div",
+	  "children": [
+	    {
+	      "type": "list",
+	      "classList": [
+	        "list"
+	      ],
+	      "children": [
+	        {
+	          "type": "refresh",
+	          "classList": function () {return ['refresh-view', 'refresh-view-' + (this.skinType)]},
+	          "attr": {
+	            "display": function () {return this.refresh_display},
+	            "refreshing": function () {return this.refreshing}
+	          },
+	          "events": {
+	            "refresh": "onrefresh"
+	          },
+	          "children": [
+	            {
+	              "type": "loading-indicator",
+	              "classList": [
+	                "indicator"
+	              ]
+	            },
+	            {
+	              "type": "text",
+	              "classList": function () {return ['refresh-arrow', 'refresh-arrow-' + (this.skinType)]},
+	              "attr": {
+	                "value": "下拉刷新"
+	              }
+	            }
+	          ]
+	        },
+	        {
+	          "type": "cell",
+	          "append": "tree",
+	          "repeat": {
+	            "expression": function () {return this.tags},
+	            "value": "tag"
+	          },
+	          "events": {
+	            "click": "closemenu"
+	          },
+	          "children": [
+	            {
+	              "type": "pc_image_head_item",
+	              "attr": {
+	                "tag": function () {return this.tag}
+	              }
+	            }
+	          ]
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 234 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "list": {
+	    "width": 750
+	  },
+	  "content_class-0": {
+	    "backgroundColor": "#f5f5f5"
+	  },
+	  "content_class-1": {
+	    "backgroundColor": "#15253d"
+	  },
+	  "loading-view": {
+	    "width": 750,
+	    "height": "50wx",
+	    "display": "flex",
+	    "MsFlexAlign": "center",
+	    "WebkitAlignItems": "center",
+	    "WebkitBoxAlign": "center",
+	    "alignItems": "center",
+	    "justifyContent": "center"
+	  },
+	  "loading-view-1": {
+	    "backgroundColor": "#15253d"
+	  },
+	  "loading-view-0": {
+	    "backgroundColor": "#f5f5f5"
+	  },
+	  "refresh-arrow": {
+	    "marginTop": "3wx",
+	    "height": "12wx",
+	    "width": "200wx",
+	    "fontSize": "12wx",
+	    "textAlign": "center",
+	    "alignItems": "center"
+	  },
+	  "refresh-arrow-0": {
+	    "color": "#BBBBBB"
+	  },
+	  "refresh-arrow-1": {
+	    "color": "#666666"
+	  },
+	  "refresh-view": {
+	    "width": 750,
+	    "height": "40wx",
+	    "display": "flex",
+	    "MsFlexAlign": "center",
+	    "WebkitAlignItems": "center",
+	    "WebkitBoxAlign": "center",
+	    "alignItems": "center",
+	    "justifyContent": "center"
+	  },
+	  "refresh-view-0": {
+	    "backgroundColor": "#f5f5f5"
+	  },
+	  "refresh-view-1": {
+	    "backgroundColor": "#15253d"
+	  },
+	  "indicator": {
+	    "height": "25wx",
+	    "width": "25wx",
+	    "color": "#889967"
+	  }
+	}
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function(module, exports, __weex_require__){'use strict';
+
+	__webpack_require__(229);
+	__webpack_require__(5);
+	var yoka = __webpack_require__(87);
+	var weexJsoupModule = __weex_require__('@weex-module/weexJsoupModule');
+	var storage = __weex_require__('@weex-module/storage');
+	module.exports = {
+	    data: function () {return {
+	        tags: [],
+	        refreshing: 'false',
+	        refresh_display: 'show',
+	        skinType: 0,
+	        showLoading: 'hide',
+	        href: yoka.getmm_pc_image()
+	    }},
+	    methods: {
+	        closemenu: function closemenu() {
+	            this._parent.close();
+	        },
+	        onrefresh: function onrefresh(e) {
+	            var self = this;
+	            self.refresh_display = 'show';
+	            self.refresh();
+	        },
+	        refresh: function refresh() {
+	            var self = this;
+	            weexJsoupModule.pcimagehead(self.href, function (e) {
+	                self.refresh_display = 'hide';
+	                self.showLoading = 'hide';
+	                self.refreshing = "false";
+	                var json;
+	                json = eval('(' + e + ')');
+	                console.log('json===' + json);
+	                self.tags.splice(0, self.tags.length);
+	                if (json.list) {
+	                    if (json.list && json.list.length > 0) {
+	                        for (var i = 0; i < json.list.length; i++) {
+	                            var tag = json.list[i];
+	                            self.tags.push(tag);
+	                        }
+	                    }
+	                }
+	            });
+	        }
+	    },
+	    created: function created() {
+	        var self = this;
+
+	        var shref = this.$getConfig().href;
+	        if (shref != undefined) {
+	            self.href = shref;
+	        }
+	        self.refresh();
+	    },
+	    ready: function ready() {}
+
 	};}
 	/* generated by weex-loader */
 

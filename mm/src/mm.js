@@ -1,8 +1,8 @@
 var BASE_URL = {
     //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
     //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-    IP: '192.168.1.15:8080',
-    HTTP: 'http://',//https:// http://
+    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
+    HTTP: 'https://',//https:// http://
 
 };
 

@@ -44,9 +44,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(240)
-	var __weex_style__ = __webpack_require__(241)
-	var __weex_script__ = __webpack_require__(242)
+	var __weex_template__ = __webpack_require__(257)
+	var __weex_style__ = __webpack_require__(258)
+	var __weex_script__ = __webpack_require__(259)
 
 	__weex_define__('@weex-component/42e8e25c63ec1ab4fac150f862d4647b', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -2034,8 +2034,8 @@
 	var BASE_URL = {
 	    //win 执行start npm run build:native  npm run build:browser  npm run serve &  npm run dev:yoka
 	    //raw.githubusercontent.com/fengmnegchang/mmweex/master 192.168.1.15:8080 192.168.1.9:8080
-	    IP: '192.168.1.15:8080',
-	    HTTP: 'http://',//https:// http://
+	    IP: 'raw.githubusercontent.com/fengmnegchang/mmweex/master',
+	    HTTP: 'https://',//https:// http://
 
 	};
 
@@ -2050,7 +2050,14 @@
 	    mm_m_search_url :"http://m.mm131.com/search.php?",
 	    mm_m_image : "http://m.mm131.com/xinggan/2847.html",
 	    mm_pc : "http://www.mm131.com/",
-	    mm_pc_nav :"http://www.mm131.com/xinggan/"
+	    mm_pc_nav :"http://www.mm131.com/xinggan/",
+	    mm_pc_image :"http://www.mm131.com/mingxing/1742.html"
+	};
+
+	exports.getmm_pc_image = function () {
+	    var url = YOKA.mm_pc_image;
+	    console.log('mm_pc_image==' + url);
+	    return url;
 	};
 	exports.getmm_pc_nav = function () {
 	    var url = YOKA.mm_pc_nav;
@@ -2354,7 +2361,24 @@
 /* 237 */,
 /* 238 */,
 /* 239 */,
-/* 240 */
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2442,7 +2466,7 @@
 	}
 
 /***/ },
-/* 241 */
+/* 258 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -2474,7 +2498,7 @@
 	}
 
 /***/ },
-/* 242 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
