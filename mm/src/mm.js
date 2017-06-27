@@ -17,7 +17,14 @@ var YOKA = {
     mm_m_search_url :"http://m.mm131.com/search.php?",
     mm_m_image : "http://m.mm131.com/xinggan/2847.html",
     mm_pc : "http://www.mm131.com/",
-    mm_pc_nav :"http://www.mm131.com/xinggan/"
+    mm_pc_nav :"http://www.mm131.com/xinggan/",
+    mm_pc_image :"http://www.mm131.com/mingxing/1742.html"
+};
+
+exports.getmm_pc_image = function () {
+    var url = YOKA.mm_pc_image;
+    console.log('mm_pc_image==' + url);
+    return url;
 };
 exports.getmm_pc_nav = function () {
     var url = YOKA.mm_pc_nav;
