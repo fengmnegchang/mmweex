@@ -10,6 +10,7 @@
 <script>
 require('weex-components')
     var navigator = require('@weex-module/navigator')
+var weexNavigatorModule = require('@weex-module/weexNavigatorModule')
     var yoka = require('./mm');
     var globalEventModule = require('@weex-module/globalEvent');
     module.exports = {
@@ -85,7 +86,7 @@ require('weex-components')
 
 
 //                alert('event.value : ' + event.value)
-                navigator.push({
+                weexNavigatorModule.push({
                     url: yoka.getDefaultUrl(name),
                     animated: "true"
                 }, event => {
